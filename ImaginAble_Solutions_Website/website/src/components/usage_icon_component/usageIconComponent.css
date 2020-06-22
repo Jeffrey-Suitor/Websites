@@ -1,12 +1,13 @@
 .icon-container{
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    border-radius: 5px;
     display: grid;
     grid-template-columns: 100%;
-    width: min(10vw, 80px);
+    max-width: 80px;
+    width: 10vw;
     padding: calc(0.5em + 2%);
     border-radius: 10px;
     background-color: var(--white-colour);
+    box-sizing: content-box;
 }
 .icon-image{
     width: 100%;

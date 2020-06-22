@@ -17,9 +17,15 @@
   --min-view: 320;
   --min-view-px: 320px;
   --max-view-px: 1920px;
-  --scalar: calc((min(100vw, var(--max-view-px)) - var(--min-view-px)) / (var(--max-view) - var(--min-view)));
+  --scalar: calc((100vw - var(--min-view-px)) / (var(--max-view) - var(--min-view)));
   --main-margin: 8vw;
   --top-nav-height: 50px;
+}
+
+@media (min-width: 1920px){
+  :root{
+    --scalar: calc((var(--max-view-px) - var(--min-view-px)) / (var(--max-view) - var(--min-view)));
+  }
 }
 
 * {
@@ -178,7 +184,7 @@ ul {
 
 .Mission-content {
   display: grid;
-  grid-template-columns: min(50px, 10%) 1fr;
+  grid-template-columns: minmax(0, 50px) 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 10px 20px;
   align-items: center;
@@ -247,7 +253,9 @@ ul {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-template-rows: 1fr;
-  width: min(80%, 800px);
+  max-width: 800px;
+  width: 80%;
+  grid-gap: 0 20px;
   margin: 0 auto;
   grid-area: guided-hands-icons;
 }
@@ -295,7 +303,8 @@ ul {
 }
 
 #Lianna_Image {
-  width: min(30vw, 320px);
+  max-width: 320px;
+  width: 30vw;
 }
 
 .Lianna_Text_Container > * {
@@ -574,10 +583,6 @@ ul {
     grid-area: guided-hands-icons;
     margin: 20px auto;
     width: 80%;
-  }
-
-  .icon-container {
-    width: 100px;
   }
 
   .guided-hands-conditions {

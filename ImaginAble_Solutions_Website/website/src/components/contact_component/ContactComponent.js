@@ -106,7 +106,6 @@ export default class ContactComponent extends React.Component {
   render() {
     return (
       <div className="ContactComponent">
-        <div className="Contact_Us_Form_Email">
           <form id="contact-form" onSubmit={this.handleSubmit} method="POST">
             <input
               type="text"
@@ -178,7 +177,6 @@ export default class ContactComponent extends React.Component {
               </svg>
             </div>
           </form>
-        </div>
       </div>
     );
   }

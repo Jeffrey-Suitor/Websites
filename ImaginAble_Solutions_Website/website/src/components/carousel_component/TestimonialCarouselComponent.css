@@ -11,7 +11,7 @@
 .testimonial {
   box-sizing: border-box;
   transition: 0.5s;
-  padding: min(5%, 20px);
+  padding: 20px;
 }
 
 .testimonial:hover{
@@ -46,7 +46,6 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    margin: 0 30px;
     height: 100%;
     width: 100%;
     margin: 0;

@@ -11,6 +11,7 @@ label {
   padding: 10px 0;
   text-align: left;
   margin: 0;
+  width: 100%;
 }
 
 #subscription_checkbox{
@@ -40,10 +41,11 @@ textarea {
 }
 
 #contact-form {
+  width: 100%;
   display: grid;
   grid-template-rows: repeat(3, max-content) 1fr min-content;
   grid-gap: 10px;
-  grid-template-columns: minmax(max-content,1fr) 2fr;
+  grid-template-columns: minmax(1fr, max-content) 2fr;
   grid-template-areas:
     "name name"
     "phone phone"
