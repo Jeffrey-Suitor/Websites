@@ -1,0 +1,24 @@
+.icon-container{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 100%;
+    width: min(10vw, 80px);
+    padding: calc(0.5em + 2%);
+    border-radius: 10px;
+    background-color: var(--white-colour);
+}
+.icon-image{
+    width: 100%;
+}
+
+.icon-text{
+    --min-font: 8;
+    --min-font-px: 8px;
+    --max-font: 30;
+    font-size: calc(
+      var(--min-font-px) + (var(--max-font) - var(--min-font)) * var(--scalar)
+    );
+    color: var(--accent-colour);
+    padding-top: 5px ;
+}

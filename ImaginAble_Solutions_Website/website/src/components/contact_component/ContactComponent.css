@@ -1,0 +1,220 @@
+input,
+textarea,
+label {
+  border-radius: var(--border-radius);
+  --min-font: 10;
+  --min-font-px: 10px;
+  --max-font: 30;
+  font-size: calc(var(--min-font-px) + (var(--max-font) - var(--min-font)) * var(--scalar));
+  text-indent: 20px;
+  border: 2px solid var(--accent-colour);
+  padding: 10px 0;
+  text-align: left;
+  margin: 0;
+}
+
+#subscription_checkbox{
+ display: none;
+}
+
+.subscription{
+  --min-font: 8;
+  --min-font-px: 8px;
+  text-indent: 0;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: background-color 0.5s ease;
+  color: var(--accent-colour);
+}
+
+.subscription_active, .subscription_active:hover{
+  background-color: var(--approval-colour);
+  color: var(--white-colour);
+}
+
+textarea {
+  border-radius: 20px;
+}
+
+#contact-form {
+  display: grid;
+  grid-template-rows: repeat(3, max-content) 1fr min-content;
+  grid-gap: 10px;
+  grid-template-columns: minmax(max-content,1fr) 2fr;
+  grid-template-areas:
+    "name name"
+    "phone phone"
+    "email email"
+    "message message"
+    "subscription submit";
+}
+
+#name {
+  grid-area: name;
+}
+#phone {
+  grid-area: phone;
+}
+#email {
+  grid-area: email;
+}
+#message {
+  grid-area: message;
+}
+.progress_button {
+  grid-area: submit;
+}
+
+#subscription{
+  grid-area: subscription;
+}
+
+/* Button container */
+.progress-button {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Button style */
+.progress-button button {
+  height: 70px;
+  width: 100%;
+  border-radius: 50px;
+}
+
+/* Text (transition for when returning to initial state) */
+.progress-button button span {
+  -webkit-transition: opacity 0.3s 0.1s;
+  transition: opacity 0.3s 0.1s;
+}
+
+/* Common style of SVGs */
+.progress-button svg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.progress-button svg path {
+  opacity: 0;
+  fill: none;
+}
+
+.progress-button svg.progress-circle path {
+  stroke: var(--accent-colour);
+  stroke-width: 5;
+}
+
+.progress-button svg.checkmark path,
+.progress-button svg.cross path {
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-width: 4;
+  -webkit-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+}
+
+/* Loading, success and error effects */
+.loading.progress-button button {
+  width: 70px; /* make a circle */
+  border-width: 5px;
+  border-color: #ddd;
+  background-color: transparent;
+  color: #fff;
+}
+
+.loading.progress-button span {
+  -webkit-transition: opacity 0.15s;
+  transition: opacity 0.15s;
+}
+
+.loading.progress-button span,
+.success.progress-button span,
+.error.progress-button span {
+  opacity: 0; /* keep it hidden in all states */
+}
+
+.success.progress-button button,
+.error.progress-button button {
+  -webkit-transition: background-color 0.3s, width 0.3s, border-width 0.3s;
+  transition: background-color 0.3s, width 0.3s, border-width 0.3s;
+}
+
+.success.progress-button button {
+  border-color: var(--approval-colour);
+  background-color: var(--approval-colour);
+  color: var(--approval-colour);
+}
+
+.error.progress-button button {
+  border-color: var(--rejection-colour);
+  background-color: var(--rejection-colour);
+  color: var(--rejection-colour);
+}
+
+.loading.progress-button svg.progress-circle path,
+.success.progress-button svg.checkmark path,
+.error.progress-button svg.cross path {
+  opacity: 1;
+  -webkit-transition: stroke-dashoffset 0.3s;
+  transition: stroke-dashoffset 0.3s;
+}
+
+@media (min-width: 600px) {
+  #contact-form {
+    grid-gap: 30px;
+  }
+
+  .progress-button {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  #name {
+    grid-area: name;
+  }
+  #phone {
+    grid-area: phone;
+  }
+  #email {
+    grid-area: email;
+  }
+  #message {
+    grid-area: message;
+  }
+  .progress_button {
+    grid-area: submit;
+  }
+
+  #subscription{
+    grid-area: subscription;
+  }
+
+  #contact-form {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "name message"
+      "phone message"
+      "email message"
+      "subscription message"
+      "submit message";
+    grid-gap: 40px 100px;
+  }
+
+  .progress-button {
+    text-align: center;
+    width: 100%;
+  }
+}

@@ -1,0 +1,71 @@
+.dotstyle{
+    margin-top: 20px;
+}
+
+.dotstyle ul {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	cursor: default;
+	-webkit-touch-callout: none;
+    user-select: none;
+}
+
+.dotstyle li {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0 10px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.dotstyle li span {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: absolute;
+}
+
+.dotstyle li span:focus {
+	outline: none;
+}
+
+.dotstyle-circlegrow li span {
+	overflow: hidden;
+	background-color: transparent;
+	box-shadow: inset 0 0 0 3px var(--accent-colour);
+	-webkit-transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
+}
+
+.dotstyle-circlegrow li span::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	border-radius: 50%;
+	background-color: var(--accent-colour);
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-transition: -webkit-transform 0.3s ease;
+	transition: transform 0.3s ease;
+}
+
+.dotstyle-circlegrow li span:hover,
+.dotstyle-circlegrow li span:focus {
+	opacity: 0.6;
+}
+
+.dotstyle-circlegrow li.current span::after {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}

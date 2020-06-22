@@ -1,0 +1,636 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@font-face {
+  font-family: "Bookman Old Style";
+  src: url("./assets/fonts/Bookman\ Old\ Style\ Regular.ttf");
+}
+
+:root {
+  --accent-colour: #0db7c4;
+  --white-colour: white;
+  --approval-colour: #1ecd97;
+  --rejection-colour: #fb797e;
+  --border-radius: 50px;
+  --menu-change: 800px;
+  --logo-lettering: "Bookman Old Style", "Montserrat";
+  --max-view: 1920;
+  --min-view: 320;
+  --min-view-px: 320px;
+  --max-view-px: 1920px;
+  --scalar: calc((min(100vw, var(--max-view-px)) - var(--min-view-px)) / (var(--max-view) - var(--min-view)));
+  --main-margin: 8vw;
+  --top-nav-height: 50px;
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+.Main {
+  width: var(--max-view);
+  margin: 0 var(--main-margin);
+  position: relative;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "logo"
+    "video"
+    "mission"
+    "guided-hands"
+    "testimonials"
+    "about"
+    "achievements"
+    "collaborators"
+    "contact";
+}
+
+.anchor {
+  display: block;
+  visibility: hidden;
+  height: 0;
+}
+
+button {
+  --min-font: 12;
+  --min-font-px: 12px;
+  --max-font: 30;
+  font-size: calc(var(--min-font-px) + (var(--max-font) - var(--min-font)) * var(--scalar));
+  width: fit-content;
+  border-radius: var(--border-radius);
+  padding: 10px 20px 10px 20px;
+  border: 2px solid var(--accent-colour);
+  background: transparent;
+  color: var(--accent-colour);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+}
+
+button:hover,
+label:hover {
+  background-color: var(--accent-colour);
+  color: #fff;
+}
+
+button:focus,
+input:focus,
+textarea {
+  outline: none;
+}
+
+h1 {
+  --min-font: 25;
+  --min-font-px: 25px;
+  --max-font: 40;
+  font-size: calc(var(--min-font-px) + (var(--max-font) - var(--min-font)) * var(--scalar));
+  margin: 1.5em 0 0.5em 0;
+  color: var(--accent-colour);
+  text-align: left;
+}
+
+p,
+li,
+#Guided_Hands_Product_Help_You_YOU {
+  --min-font: 13;
+  --min-font-px: 13px;
+  --max-font: 18;
+  font-size: calc(var(--min-font-px) + (var(--max-font) - var(--min-font)) * var(--scalar));
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  --min-font: 18;
+  --min-font-px: 18px;
+  --max-font: 30;
+  font-size: calc(var(--min-font-px) + (var(--max-font) - var(--min-font)) * var(--scalar));
+  margin: 0;
+  margin-bottom: 0.25em;
+  text-align: left;
+}
+
+h5 {
+  color: var(--white-colour);
+  --min-font: 15;
+  --min-font-px: 15px;
+  --max-font: 30;
+  font-size: calc(var(--min-font-px) + (var(--max-font) - var(--min-font)) * var(--scalar));
+  margin: 10px 0 0 0;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  background-color: #c8c8c8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #969696;
+  border-radius: 2px;
+}
+
+.Logo {
+  margin: 20px auto 30px auto;
+  width: fit-content;
+  background-color: var(--white-colour);
+  position: relative;
+  grid-area: logo;
+}
+
+.Logo_Large_Lettering {
+  --min-font: 50;
+  --min-font-px: 50px;
+  --max-font: 80;
+  font-size: calc(var(--min-font-px) + (var(--max-font) - var(--min-font)) * var(--scalar));
+  font-family: var(--logo-lettering);
+}
+
+.Logo_Small_Lettering {
+  --min-font: 16;
+  --min-font-px: 16px;
+  --max-font: 30;
+  font-size: calc(var(--min-font-px) + (var(--max-font) - var(--min-font)) * var(--scalar));
+  font-family: var(--logo-lettering);
+  text-align: right;
+  margin-top: -0.65em;
+}
+
+.Video {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 400px;
+  grid-area: video;
+}
+
+.Mission {
+  grid-area: mission;
+}
+
+.Mission-content {
+  display: grid;
+  grid-template-columns: min(50px, 10%) 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px 20px;
+  align-items: center;
+}
+
+.mission-icon{
+  width: 100%;
+}
+
+.Testimonials {
+  grid-area: testimonials;
+}
+
+.About {
+  grid-area: about;
+}
+
+.Achievements {
+  grid-area: achievements;
+}
+
+.collaborators {
+  grid-area: collaborators;
+}
+
+.Contact_Us {
+  grid-area: contact;
+}
+
+.Guided_Hands {
+  grid-area: guided-hands;
+}
+
+.landing-text {
+  display: none;
+  visibility: hidden;
+  grid-area: landing-text;
+}
+
+.Guided_Hands_Product_Image {
+  border-radius: 5%;
+  width: auto;
+  max-height: 400px;
+  max-width: 90%;
+  grid-area: guided-hands-product-image;
+}
+
+#Guided_Hands_Product_Image_Web {
+  display: none;
+  visibility: hidden;
+  grid-area: guided-hands-product-image-web;
+}
+
+#Guided_Hands_Product_Text {
+  padding: 1.5em 0;
+}
+
+#Guided_Hands_Product_Help_You_YOU {
+  display: inline;
+  color: var(--accent-colour);
+  background-color: unset;
+}
+
+.Guided_Hands_Product_Help_You_Icons {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: 1fr;
+  width: min(80%, 800px);
+  margin: 0 auto;
+  grid-area: guided-hands-icons;
+}
+
+.Guided_Hands_Product_Help_You_Icons > * {
+  place-self: center;
+}
+
+#features-header,
+#testimonials-header {
+  --min-font: 18;
+  --min-font-px: 18px;
+  --max-font: 32;
+  font-size: calc(var(--min-font-px) + (var(--max-font) - var(--min-font)) * var(--scalar));
+  margin: 0;
+  margin-bottom: 0.5em;
+  color: var(--accent-colour);
+  text-align: left;
+  margin-top: 1.25em;
+}
+
+.features {
+  grid-area: guided-hands-features;
+}
+
+.guided-hands-list li {
+  padding-bottom: 0.5em;
+  text-indent: -1.75em;
+  margin-left: 1.75em;
+}
+
+.guided-hands-list li:nth-last-child(1) {
+  padding-bottom: 0;
+}
+
+.guided-hands-list li::before {
+  content: "\2B24";
+  padding-right: 10px;
+  color: var(--accent-colour);
+  opacity: 0.4;
+}
+
+.guided-hands-conditions-text {
+  margin: 3em 0 1em 0;
+}
+
+#Lianna_Image {
+  width: min(30vw, 320px);
+}
+
+.Lianna_Text_Container > * {
+  text-align: center;
+}
+
+#Program_Text {
+  padding: 5px;
+  --min-font: 12;
+  --min-font-px: 12px;
+}
+
+#Lianna_Title_Text {
+  margin: 0;
+  margin-bottom: 0.25em;
+  --min-font: 22;
+  --min-font-px: 22px;
+  --max-font: 35;
+}
+
+#Our_Story_Button {
+  margin-top: 1em;
+}
+
+.collaborators-image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.collaborators-image {
+  flex: 0 0 50%;
+  width: 25%;
+  box-sizing: border-box;
+  padding: calc(5px + 1%) 10px;
+  object-fit: contain;
+  max-height: 200px;
+}
+
+.collaborators a {
+  display: contents;
+}
+
+@media (min-width: 450px) {
+  #guided-hands-conditions-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(max-content, 1fr));
+    padding: 0;
+    margin: 20px auto 0 auto;
+  }
+
+  #guided-hands-conditions-list li {
+    text-indent: 0;
+  }
+}
+
+@media (min-width: 600px) {
+  .Lianna_Image_Container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .Lianna_Text_Container > * {
+    text-align: left;
+    display: grid;
+  }
+
+  #Lianna_Image {
+    padding-right: calc(10px + 4%);
+  }
+}
+
+@media (min-width: 800px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+  }
+
+  .Lianna_Image_Container {
+    margin: 0 0 0 20px;
+  }
+
+  #guided-hands-conditions-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .anchor {
+    height: var(--top-nav-height);
+  }
+
+  ul {
+    padding: 20px;
+  }
+
+  #Our_Story_Button {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+
+  .collaborators-image {
+    flex: 0 0 33%;
+    width: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .Mission_Header{
+    margin: 0.5em 0;
+  }
+
+  .collaborators-image {
+    flex: 0 0 25%;
+    width: 25%;
+  }
+
+  p,
+  li {
+    line-height: 26pt;
+  }
+
+  #draw_again {
+    --min-font: 25;
+    --min-font-px: 25px;
+    --max-font: 40;
+    font-size: calc(var(--min-font-px) + (var(--max-font) - var(--min-font)) * var(--scalar));
+    margin: 30px 0 20px 0;
+    color: var(--accent-colour);
+    text-align: left;
+  }
+
+  .About {
+    margin-bottom: 20px;
+  }
+
+  .landing-text {
+    display: block;
+    visibility: visible;
+  }
+
+  #Home_Anchor {
+    margin-top: calc(var(--top-nav-height) * -1);
+  }
+
+  #Contact_Us_Landing {
+    color: var(--accent-colour);
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .Main {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      ". ."
+      "logo video"
+      "landing-text video"
+      "guided-hands-product-image-web video"
+      "guided-hands-product-image-web mission"
+      "guided-hands guided-hands"
+      "testimonials testimonials"
+      "about about"
+      "achievements achievements"
+      "collaborators collaborators"
+      "contact contact";
+    grid-auto-rows: min-content;
+    grid-template-rows: 20px min-content min-content min-content;
+    margin-top: var(--top-nav-height);
+    grid-gap: 0 50px;
+    align-items: center;
+  }
+
+  .Video {
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 0;
+    max-height: none;
+    box-sizing: border-box;
+    width: 95%;
+    align-self: flex-start;
+    margin-top: 10px;
+  }
+
+  .Logo {
+    margin: 0;
+    align-self: flex-start;
+  }
+
+  .Guided_Hands {
+    display: grid;
+    grid-template-areas:
+      "guided-hands-anchor guided-hands-anchor"
+      "guided-hands-title guided-hands-title"
+      "guided-hands-icons guided-hands-conditions"
+      "guided-hands-text guided-hands-text"
+      "guided-hands-features guided-hands-product-carousel";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 20px;
+    align-items: center;
+    grid-auto-rows: max-content;
+    position: relative;
+  }
+
+  #Guided_Hands {
+    grid-area: guided-hands-title;
+  }
+
+  #Guided_Hands,
+  .guided-hands-conditions {
+    color: var(--white-colour);
+    position: relative;
+    background: var(--accent-colour);
+    margin: 0;
+    padding: 40px 0 0 0;
+  }
+
+  #Guided_Hands:before,
+  .guided-hands-conditions:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -9999px;
+    right: 0;
+    z-index: -10000;
+    border-left: 9999px solid var(--accent-colour);
+    box-shadow: 9999px 0 0 var(--accent-colour);
+  }
+
+  #guided-hands-conditions-list li::before {
+    color: var(--white-colour);
+    opacity: 0.7;
+  }
+
+  #Guided_Hands_Anchor {
+    grid-area: guided-hands-anchor;
+  }
+
+  .Guided_Hands_Product_Image {
+    max-height: none;
+    max-width: none;
+    width: 100%;
+    grid-area: guided-hands-product-image;
+  }
+
+  #Guided_Hands_Product_Image_Mobile {
+    display: none;
+    visibility: hidden;
+  }
+
+  #Guided_Hands_Product_Image_Web {
+    display: block;
+    visibility: visible;
+    width: 400px;
+    height: auto;
+    margin: auto;
+  }
+
+  .Guided_Hands_Product_Help_You_Icons {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+    grid-area: guided-hands-icons;
+    margin: 20px auto;
+    width: 80%;
+  }
+
+  .icon-container {
+    width: 100px;
+  }
+
+  .guided-hands-conditions {
+    grid-area: guided-hands-conditions;
+    padding: 0 0 40px 0;
+    margin: 0;
+  }
+
+  .guided-hands-product-image-slideshow {
+    grid-area: guided-hands-product-carousel;
+  }
+
+  .guided-hands-conditions-text {
+    margin-top: 0;
+  }
+
+  #guided-hands-conditions-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #Guided_Hands_Product_Text {
+    display: none;
+  }
+
+  .Mission {
+    width: 95%;
+    margin: auto;
+    margin-top: 0;
+  }
+
+  .Lianna_Text_Container {
+    width: 650px;
+  }
+
+  .abstract {
+    border-radius: 50% 50% 100% 0% / 42% 0% 100% 58%;
+    width: 400px;
+    height: 400px;
+    background: rgb(13, 183, 196);
+    background: linear-gradient(90deg, rgba(13, 183, 196, 0.4) 0%, rgba(0, 212, 255, 0) 100%);
+    margin-left: 10%;
+  }
+
+  .features-list {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 0 0 20px;
+  }
+
+  .features {
+    height: 100%;
+    width: 100%;
+  }
+}
