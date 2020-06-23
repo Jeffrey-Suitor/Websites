@@ -3,8 +3,6 @@ import "./ModalComponent.css";
 import PropTypes from "prop-types";
 
 export default function ModalComponent(props) {
-  
-  
   const onClose = (e) => {
     props.onClose && props.onClose(e);
   };
@@ -14,12 +12,12 @@ export default function ModalComponent(props) {
   }
 
   return (
-    <div className="background">
-      <div className="modal" id="modal">
+    <div className="modal-container">
+      <div className="modal">
         <h1>{props.title}</h1>
-        <div className="content_container">{props.content}</div>
-        <div className="actions">
-          <button className="toggle-button" onClick={onClose}>
+        <div className="modal-content">{props.content}</div>
+        <div className="modal-actions">
+          <button className="modal-actions-togbtn" onClick={onClose}>
             Close
           </button>
         </div>

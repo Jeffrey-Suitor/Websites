@@ -70,8 +70,8 @@ export default class ContactComponent extends React.Component {
   }
 
   resetForm() {
-    if (this.state.email_subscription){
-      this.onSubscriptionChange()
+    if (this.state.email_subscription) {
+      this.onSubscriptionChange();
     }
     this.setState({ name: "", phone_number: "", email: "", message: "", email_subscription: false });
   }
@@ -96,87 +96,87 @@ export default class ContactComponent extends React.Component {
     let status = !this.state.email_subscription;
 
     if (status) {
-      subscription.classList.add("subscription_active")
+      subscription.classList.add("subscription_active");
     } else {
-      subscription.classList.remove("subscription_active")
+      subscription.classList.remove("subscription_active");
     }
     this.setState({ email_subscription: status });
   }
 
   render() {
     return (
-      <div className="ContactComponent">
-          <form id="contact-form" onSubmit={this.handleSubmit} method="POST">
-            <input
-              type="text"
-              className="form-control"
-              id="name"
-              value={this.state.name}
-              onChange={this.onNameChange}
-              placeholder="Name"
-              required
-            />
+      <div className="contact">
+        <form className="contact-form" onSubmit={this.handleSubmit} method="POST">
+          <input
+            type="text"
+            className="form-control"
+            id="name"
+            value={this.state.name}
+            onChange={this.onNameChange}
+            placeholder="Name"
+            required
+          />
 
-            <input
-              type="tel"
-              className="form-control"
-              id="phone"
-              aria-describedby="phone_field"
-              value={this.state.phone_number}
-              onChange={this.onPhoneChange}
-              placeholder="Phone Number"
-            />
+          <input
+            type="tel"
+            className="form-control"
+            id="phone"
+            aria-describedby="phone_field"
+            value={this.state.phone_number}
+            onChange={this.onPhoneChange}
+            placeholder="Phone Number"
+          />
 
-            <input
-              type="email"
-              className="form-control"
-              id="email"
-              aria-describedby="emailHelp"
-              value={this.state.email}
-              onChange={this.onEmailChange}
-              placeholder="Email"
-              required
-            />
+          <input
+            type="email"
+            className="form-control"
+            id="email"
+            aria-describedby="emailHelp"
+            value={this.state.email}
+            onChange={this.onEmailChange}
+            placeholder="Email"
+            required
+          />
 
-            <textarea
-              className="form-control"
-              rows="5"
-              id="message"
-              value={this.state.message}
-              onChange={this.onMessageChange}
-              placeholder="Message"
-              required
-            />
+          <textarea
+            className="form-control"
+            rows="5"
+            id="message"
+            value={this.state.message}
+            onChange={this.onMessageChange}
+            placeholder="Message"
+            required
+          />
 
-            <input
-              type="checkbox"
-              value={this.state.email_subscription}
-              onChange={this.onSubscriptionChange}
-              id="subscription_checkbox"
-            />
-            <label htmlFor="subscription_checkbox" className="subscription">
-              Subscribe to our email list
-            </label>
+          <input
+            type="checkbox"
+            value={this.state.email_subscription}
+            onChange={this.onSubscriptionChange}
+            id="subscription_checkbox"
+          />
+          <label htmlFor="subscription_checkbox" className="subscription form-control">
+            Subscribe to our email list
+          </label>
 
-            <div className="progress-button">
-              <button type="submit" id="submit_button">
-                Submit
-              </button>
-              <svg className="progress-circle" width="70" height="70">
-                <path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" />
-              </svg>
-              <svg className="checkmark" width="70" height="70">
-                <path d="m31.5,46.5l15.3,-23.2" />
-                <path d="m31.5,46.5l-8.5,-7.1" />
-              </svg>
-              <svg className="cross" width="70" height="70">
-                <path d="m35,35l-9.3,-9.3" />
-                <path d="m35,35l9.3,9.3" />
-                <path d="m35,35l-9.3,9.3" />
-                <path d="m35,35l9.3,-9.3" />
-              </svg>
-            </div>
-          </form>
+          <div className="progress-button">
+            <button type="submit" id="submit_button">
+              Submit
+            </button>
+            <svg className="progress-circle" width="70" height="70">
+              <path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" />
+            </svg>
+            <svg className="checkmark" width="70" height="70">
+              <path d="m31.5,46.5l15.3,-23.2" />
+              <path d="m31.5,46.5l-8.5,-7.1" />
+            </svg>
+            <svg className="cross" width="70" height="70">
+              <path d="m35,35l-9.3,-9.3" />
+              <path d="m35,35l9.3,9.3" />
+              <path d="m35,35l-9.3,9.3" />
+              <path d="m35,35l9.3,-9.3" />
+            </svg>
+          </div>
+        </form>
       </div>
     );
   }

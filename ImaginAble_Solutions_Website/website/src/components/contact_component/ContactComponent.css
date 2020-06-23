@@ -1,6 +1,4 @@
-input,
-textarea,
-label {
+.form-control {
   border-radius: var(--border-radius);
   --min-font: 10;
   --min-font-px: 10px;
@@ -14,11 +12,11 @@ label {
   width: 100%;
 }
 
-#subscription_checkbox{
- display: none;
+#subscription_checkbox {
+  display: none;
 }
 
-.subscription{
+.subscription {
   --min-font: 8;
   --min-font-px: 8px;
   text-indent: 0;
@@ -31,16 +29,13 @@ label {
   color: var(--accent-colour);
 }
 
-.subscription_active, .subscription_active:hover{
+.subscription_active,
+.subscription_active:hover {
   background-color: var(--approval-colour);
   color: var(--white-colour);
 }
 
-textarea {
-  border-radius: 20px;
-}
-
-#contact-form {
+.contact-form {
   width: 100%;
   display: grid;
   grid-template-rows: repeat(3, max-content) 1fr min-content;
@@ -65,14 +60,14 @@ textarea {
 }
 #message {
   grid-area: message;
-}
-.progress_button {
-  grid-area: submit;
+  border-radius: 20px;
 }
 
-#subscription{
+#subscription {
   grid-area: subscription;
 }
+
+/* SUBMISSION BUTTON */
 
 /* Button container */
 .progress-button {
@@ -81,22 +76,20 @@ textarea {
   text-align: center;
   width: 100%;
   margin: 0 auto;
+  grid-area: submit;
 }
 
-/* Button style */
 .progress-button button {
   height: 70px;
   width: 100%;
   border-radius: 50px;
 }
 
-/* Text (transition for when returning to initial state) */
 .progress-button button span {
   -webkit-transition: opacity 0.3s 0.1s;
   transition: opacity 0.3s 0.1s;
 }
 
-/* Common style of SVGs */
 .progress-button svg {
   position: absolute;
   top: 0;
@@ -172,7 +165,7 @@ textarea {
 }
 
 @media (min-width: 600px) {
-  #contact-form {
+  .contact-form {
     grid-gap: 30px;
   }
 
@@ -183,27 +176,7 @@ textarea {
 }
 
 @media (min-width: 1200px) {
-  #name {
-    grid-area: name;
-  }
-  #phone {
-    grid-area: phone;
-  }
-  #email {
-    grid-area: email;
-  }
-  #message {
-    grid-area: message;
-  }
-  .progress_button {
-    grid-area: submit;
-  }
-
-  #subscription{
-    grid-area: subscription;
-  }
-
-  #contact-form {
+  .contact-form {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas:

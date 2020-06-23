@@ -67,7 +67,7 @@
   margin-left: 2em;
 }
 
-.achievement h3 {
+.achievement-place h3 {
   --min-font: 14;
   --min-font-px: 14px;
   --max-font: 40;
@@ -77,12 +77,11 @@
   font-weight: normal;
 }
 
-@media (min-width: 450px){
-  .achievement{
+@media (min-width: 450px) {
+  .achievement {
     grid-template-columns: minmax(50px, 1fr) 5fr max-content;
   }
 }
-
 
 @media (min-width: 1200px) {
   .achievement:nth-last-child(1):nth-child(odd) {

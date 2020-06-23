@@ -1,4 +1,4 @@
-.bottom-bar {
+.botbar {
   display: grid;
   grid-template-columns: 1fr minmax(max-content, 50%);
   grid-template-rows: 1fr;
@@ -12,7 +12,7 @@
   margin-top: 40px;
 }
 
-.bottom-bar:before {
+.botbar:before {
   content: "";
   position: absolute;
   top: 0;
@@ -24,8 +24,7 @@
   box-shadow: 9999px 0 0 var(--accent-colour);
 }
 
-.bottom-bar p,
-.bottom-bar li {
+.botbar p {
   text-align: center;
   color: var(--white-colour);
   padding: 5px;
@@ -33,30 +32,20 @@
   --min-font-px: 8px;
   --max-font: 30;
   font-size: calc(var(--min-font-px) + (var(--max-font) - var(--min-font)) * var(--scalar));
-}
-
-.bottom-bar a {
-  text-decoration: none;
-  color: var(--white-colour);
-}
-
-.bottom-bar p {
   line-height: 2em;
   padding: 0;
 }
 
-.bottom-bar li:hover,
-.bottom-bar a:hover {
+.botbar a {
+  text-decoration: none;
+  color: var(--white-colour);
+}
+
+.botbar a:hover {
   transform: scale(1.05);
 }
 
-.bottom-bar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.social-icons-container {
+.botbar-icons-container {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   height: 100%;
@@ -66,41 +55,39 @@
   padding: 0 20px;
 }
 
-.social-icon {
+.botbar-icon {
   width: 50%;
   margin: 0 auto;
 }
 
-.social-icons-container a {
+.botbar-icons-container a {
   /* autoprefixer: ignore next */
   display: contents;
 }
 
-.social-icon:hover {
+.botbar-icon:hover {
   transform: scale(1.05);
 }
 
-#large_email {
+.botbar-web-email {
   display: none;
 }
 
-#small_email{
+.botbar-mobile-email {
   margin-top: 10px;
 }
 
-#copyright{
-    --min-font: 6;
-    --min-font-px: 6px;
-    --max-font: 20;
+.botbar-copyright {
+  --min-font: 6;
+  --min-font-px: 6px;
+  --max-font: 20;
 }
 
 @media (min-width: 500px) {
-  .bottom-bar {
+  .botbar {
     grid-template-columns: 1fr 1fr;
-
   }
-
-  .social-icons-container {
+  .botbar-icons-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -113,30 +100,27 @@
 }
 
 @media (min-width: 800px) {
-  .bottom-bar {
+  .botbar {
     grid-template-columns: 1fr max-content 1fr;
   }
-  .social-icons-container {
+  .botbar-icons-container {
     grid-template-columns: repeat(2, minmax(70px, 1fr));
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 30px;
   }
-
-  #large_email {
+  .botbar-web-email {
     display: block;
   }
-
-  #small_email {
+  .botbar-mobile-email {
     display: none;
   }
-
-  .social-icon {
+  .botbar-icon {
     width: 100%;
   }
 }
 
 @media (min-width: 1200px) {
-  .social-icons-container {
+  .botbar-icons-container {
     grid-template-columns: repeat(4, minmax(70px, 1fr));
     grid-template-rows: 1fr;
     grid-gap: 30px;
