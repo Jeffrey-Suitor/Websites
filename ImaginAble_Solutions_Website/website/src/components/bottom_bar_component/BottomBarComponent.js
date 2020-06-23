@@ -1,7 +1,6 @@
 import React from "react";
 import "./BottomBarComponent.css";
 
-import email from "../../assets/icons/Email_White.svg";
 import facebook from "../../assets/icons/Facebook_White.svg";
 import instagram from "../../assets/icons/Instagram_White.svg";
 import linkedin from "../../assets/icons/LinkedIn_White.svg";

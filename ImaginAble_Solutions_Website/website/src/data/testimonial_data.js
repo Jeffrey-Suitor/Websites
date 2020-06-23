@@ -2,7 +2,6 @@ import React from "react";
 
 import elissa from "../assets/images/elissa.png";
 import tarnopolsky from "../assets/images/tarnopolsky.png";
-import mesterman from "../assets/images/mesterman.png";
 import sam from "../assets/images/sam.png";
 import goran from "../assets/images/goran.png";
 import remilli from "../assets/images/remilli.png"
@@ -43,7 +42,7 @@ const testimonials = [
         <br />
         ImaginAble Solutions will help so many people and truly change lives for the better. "
       </p>
-    ),
+    )
   },
 
   {
@@ -72,7 +71,7 @@ const testimonials = [
         Hospital. His patient, a 12-year-old girl living with Dystonia uses Guided Hands&trade; during her math and art
         classes.
       </p>
-    ),
+    )
   },
 
   {
@@ -92,40 +91,9 @@ const testimonials = [
       </div>
     ),
 
-    button: false,
+    button: false
   },
 
-  /*
-  {
-    img: mesterman,
-    alt_img_text: "McMaster Children's Hospital Logo",
-    body: (
-      <p>
-Dr. Mesterman will be leading a formal research study with her patients at McMaster Children’s Hospital and the Ron Joyce Children’s Health Centre
-      </p>
-    ),
-    about: (
-      <div>
-        <p className="testimonials_about_name">Dr. Ronit Mesterman</p>
-        <p>
-          Hamilton Health Scienecs
-          <br />
-          Research &amp; Medical Advisor for ImaginAble Solutions
-        </p>
-      </div>
-    ),
-
-    button: "Read More",
-    hear_more: (
-      <p>
-        “Guided Hands&trade; is opening wonderful opportunities for increased participation in fun activities.” <br />
-        <br />
-        Dr. Mesterman will be conducting a formal research study with her patient at McMaster Children’s Hospital and
-        the Ron Joyce Children’s Health Centre.
-      </p>
-    ),
-  },
-*/
   {
     img: remilli,
     alt_img_text: "Photo of  Steve Remilli",
@@ -160,7 +128,7 @@ Dr. Mesterman will be leading a formal research study with her patients at McMas
         excited to continue to support such an impactful company that is making real changes to improve our community by
         providing individuals with a higher quality of life.”
       </p>
-    ),
+    )
   },
 
   {
@@ -198,8 +166,8 @@ Dr. Mesterman will be leading a formal research study with her patients at McMas
         takes to make her venture succeed. I believe Guided Hands&trade; will make a positive difference for many
         people."
       </p>
-    ),
-  },
+    )
+  }
 ];
 
 export default testimonials;

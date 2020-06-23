@@ -5,10 +5,12 @@ node_modules/
 
 # testing
 coverage/
+*.log
 
 # production
 build/
-build.zip
+*.zip
+package-lock.json
 
 # misc
 .DS_Store
@@ -16,6 +18,4 @@ build.zip
 .env.development.local
 .env.test.local
 .env.production.local
-
-package-lock.json
 .vscode/

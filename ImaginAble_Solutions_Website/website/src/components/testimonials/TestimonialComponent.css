@@ -68,11 +68,8 @@ div:empty {
   position: absolute;
   top: 0;
   right: 0;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: minmax(0, 1fr) max-content;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card.is-flipped {
@@ -86,23 +83,20 @@ div:empty {
 }
 
 .testimonials_hear_more {
-  padding: 40px;
+  margin: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .testimonials_hear_more p {
-  overflow: scroll;
-  width: 100%;
-  max-height: 100%;
   line-height: 1.5em;
   --min-font: 13;
   --min-font-px: 13px;
   --max-font: 18;
   font-size: calc(var(--min-font-px) + (var(--max-font) - var(--min-font)) * var(--scalar));
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 .testimonials_about a{
