@@ -137,18 +137,19 @@ export default class App extends React.Component {
           <h1 className="Mission_Header">Our Mission</h1>
 
           <div className="Mission-content">
-          <img className="mission-icon" src={imaginable_logo} alt="ImaginAble logo" />
+            <img className="mission-icon" src={imaginable_logo} alt="ImaginAble logo" />
 
-          <p className="Mission_Text">
-            ImaginAble Solutions creates assistive devices for people living with impaired motor function to improve
-            their quality of life during everyday activities.<br/>
-          </p>
-          <img className="mission-icon" src={heart_handshake} alt="Heart handshake" />
+            <p className="Mission_Text">
+              ImaginAble Solutions creates assistive devices for people living with impaired motor function to improve
+              their quality of life during everyday activities.
+              <br />
+            </p>
+            <img className="mission-icon" src={heart_handshake} alt="Heart handshake" />
 
-          <p>
-            Our mission is to provide our customers with the freedom and independence to live the life they had always
-            imagined.
-          </p>
+            <p>
+              Our mission is to provide our customers with the freedom and independence to live the life they had always
+              imagined.
+            </p>
           </div>
         </div>
 
@@ -279,6 +280,7 @@ export default class App extends React.Component {
           <span className="anchor" id="Collaborators_Anchor"></span>
           <h1>Collaborators</h1>
           <div className="collaborators-image-container">
+            {/*
             <a href="https://dystoniacanada.org/">
               <img
                 src={dystonia_foundation}
@@ -286,6 +288,7 @@ export default class App extends React.Component {
                 className="collaborators-image"
               />
             </a>
+            */}
             <a href="https://www.eng.mcmaster.ca/mcmaster-manufacturing-research-institute-mmri">
               <img src={mmri} alt="McMaster Manufacturing Research Institute" className="collaborators-image" />
             </a>

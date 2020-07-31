@@ -24,8 +24,8 @@ export default class ContactComponent extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let button = document.querySelector(".progress-button");
-    let button_loading = document.querySelector(".progress-button.loading");
+    let button = document.querySelector(".contact-progress-button");
+    let button_loading = document.querySelector(".contact-progress-button.loading");
 
     let progressEl = new SVGEl(document.querySelector("svg.progress-circle"));
     let successEl = new SVGEl(document.querySelector("svg.checkmark"));
@@ -109,7 +109,7 @@ export default class ContactComponent extends React.Component {
         <form className="contact-form" onSubmit={this.handleSubmit} method="POST">
           <input
             type="text"
-            className="form-control"
+            className="contact-form-control"
             id="name"
             value={this.state.name}
             onChange={this.onNameChange}
@@ -119,7 +119,7 @@ export default class ContactComponent extends React.Component {
 
           <input
             type="tel"
-            className="form-control"
+            className="contact-form-control"
             id="phone"
             aria-describedby="phone_field"
             value={this.state.phone_number}
@@ -129,7 +129,7 @@ export default class ContactComponent extends React.Component {
 
           <input
             type="email"
-            className="form-control"
+            className="contact-form-control"
             id="email"
             aria-describedby="emailHelp"
             value={this.state.email}
@@ -139,7 +139,7 @@ export default class ContactComponent extends React.Component {
           />
 
           <textarea
-            className="form-control"
+            className="contact-form-control"
             rows="5"
             id="message"
             value={this.state.message}
@@ -154,12 +154,12 @@ export default class ContactComponent extends React.Component {
             onChange={this.onSubscriptionChange}
             id="subscription_checkbox"
           />
-          <label htmlFor="subscription_checkbox" className="subscription form-control">
+          <label htmlFor="subscription_checkbox" className="subscription contact-form-control">
             Subscribe to our email list
           </label>
 
-          <div className="progress-button">
-            <button type="submit" id="submit_button">
+          <div className="contact-progress-button">
+            <button type="submit">
               Submit
             </button>
             <svg className="progress-circle" width="70" height="70">

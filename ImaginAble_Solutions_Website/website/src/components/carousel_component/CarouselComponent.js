@@ -72,7 +72,7 @@ export default class CarouselComponent extends React.Component {
               return (
                 <div
                   key={index}
-                  className="testimonial"
+                  className="testimonial_parent"
                   style={{ transform: `translateX(${this.state.diff}%)` }}
                   onClick={() => this.go_next(0)}>
                   <Swipeable

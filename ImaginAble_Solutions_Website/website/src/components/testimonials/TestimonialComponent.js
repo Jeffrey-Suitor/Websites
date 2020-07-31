@@ -10,28 +10,28 @@ export default function TestimonialComponent(props) {
 
   return (
     <div className="scene">
-      <div className="card" id={props.data.key}>
-        <div className="card__face card__face--front">
-          <div className="testimonials">
+      <div className="testimonial" id={props.data.key}>
+        <div className="testimonial-face">
+          <div className="testimonial-front-container">
 
           {props.data.img.length > 0 && (
-            <img src={props.data.img} alt={props.data.alt_img_text} className="testimonials_img " />
+            <img src={props.data.img} alt={props.data.alt_img_text} className="testimonial-front-img " />
             )}
 
-            <div className="testimonials_body">{props.data.body}</div>
+            <div className="testimonial-front-body">{props.data.body}</div>
 
             {props.data.button.length > 0 && (
-                <button onClick={flipCard} className="testimonials_button">{props.data.button}</button>
+                <button onClick={flipCard}>{props.data.button}</button>
             )}
 
-            <div className="testimonials_about">{props.data.about}</div>
+            <div className="testimonial-front-about">{props.data.about}</div>
           </div>
         </div>
 
         {props.data.button.length > 0 && (
-          <div className="card__face card__face--back">
-            <div className="testimonials_hear_more">{props.data.hear_more}</div>
-            <button id="testimonials_button_return" onClick={flipCard}>
+          <div className="testimonial-face testimonial-back">
+            <div className="testimonial-back-hearmore">{props.data.hear_more}</div>
+            <button id="testimonial-back-returnbtn" onClick={flipCard}>
               Return
             </button>
           </div>

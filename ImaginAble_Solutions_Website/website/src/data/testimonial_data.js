@@ -19,7 +19,7 @@ const testimonials = [
     ),
     about: (
       <div>
-        <p className="testimonials_about_name">Elissa</p>
+        <p className="testimonial-front-about-name">Elissa</p>
         <p>Student with Dystonia</p>
       </div>
     ),
@@ -54,7 +54,7 @@ const testimonials = [
     about: (
       <div>
         <a href="https://fhs.mcmaster.ca/pediatrics/mark_tarnopolsky.html">
-          <p className="testimonials_about_name">Dr. Mark Tarnopolsky</p>
+          <p className="testimonial-front-about-name">Dr. Mark Tarnopolsky</p>
         </a>
         <p>
           Hamilton Health Sciences
@@ -86,7 +86,7 @@ const testimonials = [
 
     about: (
       <div>
-        <p className="testimonials_about_name">Sam</p>
+        <p className="testimonial-front-about-name">Sam</p>
         <p>Student recovering from a C6 spinal cord injury</p>
       </div>
     ),
@@ -107,7 +107,7 @@ const testimonials = [
 
     about: (
       <div>
-        <p className="testimonials_about_name">Steve Remilli, P.Eng</p>
+        <p className="testimonial-front-about-name">Steve Remilli, P.Eng</p>
         <p>
           McMaster Manufacturing Research Institute <br />
           Manufacturing Advisor for ImaginAble Solutions
@@ -144,7 +144,7 @@ const testimonials = [
     about: (
       <div>
         <a href="https://experts.mcmaster.ca/display/calicg">
-          <p className="testimonials_about_name">Dr. Goran Calic</p>
+          <p className="testimonial-front-about-name">Dr. Goran Calic</p>
         </a>
         <p>
           DeGroote School of Business <br />

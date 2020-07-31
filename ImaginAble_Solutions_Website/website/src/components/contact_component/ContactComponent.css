@@ -1,4 +1,4 @@
-.form-control {
+.contact-form-control {
   border-radius: var(--border-radius);
   --min-font: 10;
   --min-font-px: 10px;
@@ -70,7 +70,7 @@
 /* SUBMISSION BUTTON */
 
 /* Button container */
-.progress-button {
+.contact-progress-button {
   position: relative;
   display: inline-block;
   text-align: center;
@@ -79,18 +79,18 @@
   grid-area: submit;
 }
 
-.progress-button button {
+.contact-progress-button button {
   height: 70px;
   width: 100%;
   border-radius: 50px;
 }
 
-.progress-button button span {
+.contact-progress-button button span {
   -webkit-transition: opacity 0.3s 0.1s;
   transition: opacity 0.3s 0.1s;
 }
 
-.progress-button svg {
+.contact-progress-button svg {
   position: absolute;
   top: 0;
   left: 50%;
@@ -99,18 +99,18 @@
   pointer-events: none;
 }
 
-.progress-button svg path {
+.contact-progress-button svg path {
   opacity: 0;
   fill: none;
 }
 
-.progress-button svg.progress-circle path {
+.contact-progress-button svg.progress-circle path {
   stroke: var(--accent-colour);
   stroke-width: 5;
 }
 
-.progress-button svg.checkmark path,
-.progress-button svg.cross path {
+.contact-progress-button svg.checkmark path,
+.contact-progress-button svg.cross path {
   stroke: #fff;
   stroke-linecap: round;
   stroke-width: 4;
@@ -119,7 +119,7 @@
 }
 
 /* Loading, success and error effects */
-.loading.progress-button button {
+.loading.contact-progress-button button {
   width: 70px; /* make a circle */
   border-width: 5px;
   border-color: #ddd;
@@ -127,38 +127,38 @@
   color: #fff;
 }
 
-.loading.progress-button span {
+.loading.contact-progress-button span {
   -webkit-transition: opacity 0.15s;
   transition: opacity 0.15s;
 }
 
-.loading.progress-button span,
-.success.progress-button span,
-.error.progress-button span {
+.loading.contact-progress-button span,
+.success.contact-progress-button span,
+.error.contact-progress-button span {
   opacity: 0; /* keep it hidden in all states */
 }
 
-.success.progress-button button,
-.error.progress-button button {
+.success.contact-progress-button button,
+.error.contact-progress-button button {
   -webkit-transition: background-color 0.3s, width 0.3s, border-width 0.3s;
   transition: background-color 0.3s, width 0.3s, border-width 0.3s;
 }
 
-.success.progress-button button {
+.success.contact-progress-button button {
   border-color: var(--approval-colour);
   background-color: var(--approval-colour);
   color: var(--approval-colour);
 }
 
-.error.progress-button button {
+.error.contact-progress-button button {
   border-color: var(--rejection-colour);
   background-color: var(--rejection-colour);
   color: var(--rejection-colour);
 }
 
-.loading.progress-button svg.progress-circle path,
-.success.progress-button svg.checkmark path,
-.error.progress-button svg.cross path {
+.loading.contact-progress-button svg.progress-circle path,
+.success.contact-progress-button svg.checkmark path,
+.error.contact-progress-button svg.cross path {
   opacity: 1;
   -webkit-transition: stroke-dashoffset 0.3s;
   transition: stroke-dashoffset 0.3s;
@@ -169,7 +169,7 @@
     grid-gap: 30px;
   }
 
-  .progress-button {
+  .contact-progress-button {
     text-align: center;
     margin: 0;
   }
@@ -188,7 +188,7 @@
     grid-gap: 40px 100px;
   }
 
-  .progress-button {
+  .contact-progress-button {
     text-align: center;
     width: 100%;
   }

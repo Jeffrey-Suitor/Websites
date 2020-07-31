@@ -8,7 +8,7 @@
 
 
 
-.testimonial {
+.testimonial_parent {
   box-sizing: border-box;
   transition: 0.5s;
   padding: 20px;
@@ -76,7 +76,7 @@
     height: 600px
   }
   
-  .testimonial {
+  .testimonial_parent {
     height: 100%;
     min-width: 50%;
     transition: 0.5s;
@@ -86,7 +86,7 @@
     align-items: center;
   }
 
-  .testimonial:nth-last-child(1):nth-child(odd){
+  .testimonial_parent:nth-last-child(1):nth-last-child(odd){
     margin-left: 25%;
   }
   

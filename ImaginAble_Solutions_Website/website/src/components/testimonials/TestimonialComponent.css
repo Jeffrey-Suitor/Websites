@@ -1,8 +1,8 @@
-.testimonials * {
+.testimonial-front-container * {
   text-align: center;
 }
 
-.testimonials {
+.testimonial-front-container {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -15,24 +15,24 @@
   margin: -10px 0 -10px 0;
 }
 
-.testimonials > * {
+.testimonial-front-container > * {
   align-self: center;
-  margin: 10px 0 10px 0;
+  margin: 10px 0;
 }
 
 div:empty {
   display: none;
 }
 
-.testimonials_img {
+.testimonial-front-img {
   margin-left: auto;
   margin-right: auto;
   max-width: 190px;
   width: 50%;
 }
 
-.testimonials_about *,
-.testimonials_body *{
+.testimonial-front-about *,
+.testimonial-front-body *{
   --min-font: 13;
   --min-font-px: 13px;
   --max-font: 18;
@@ -46,21 +46,21 @@ div:empty {
   display: contents;
 }
 
-.card {
+.testimonial {
   transition: transform 1s;
   transform-style: preserve-3d;
   height: 100%;
   position: relative;
 }
 
-.card__face {
+.testimonial-face {
   backface-visibility: hidden;
   transform: rotateX(0deg);
   height: 100%;
   text-align: center;
 }
 
-.card__face--back {
+.testimonial-back {
   transform: rotateX(0deg);
   transform: rotateY(180deg);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -70,28 +70,36 @@ div:empty {
   right: 0;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
-.card.is-flipped {
+.testimonial.is-flipped {
   transform: rotateY(180deg);
 }
 
-#testimonials_button_return {
-  margin-bottom: 20px;
+#testimonial-back-returnbtn {
   align-self: center;
   justify-self: center;
+  margin: 0;
+  margin-bottom: 20px;
+  vertical-align: middle;
+  line-height: 0;
+  padding: 20px;
 }
 
-.testimonials_hear_more {
+.testimonial-back-hearmore {
   margin: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
+  height: 100%;
+  flex-grow: 1;
 }
 
-.testimonials_hear_more p {
+.testimonial-back-hearmore p {
+  max-height: 100%;
   line-height: 1.5em;
   --min-font: 13;
   --min-font-px: 13px;
@@ -99,26 +107,26 @@ div:empty {
   font-size: calc(var(--min-font-px) + (var(--max-font) - var(--min-font)) * var(--scalar));
 }
 
-.testimonials_about a{
+.testimonial-front-about a{
   text-decoration: none;
   color: inherit;
 }
 
-.testimonials a p{
+.testimonial-front-container a p{
   text-decoration: underline;
 }
 
-.testimonials_about_name {
+.testimonial-front-about-name {
   color: var(--accent-colour);
 }
 
 @media (min-width: 1200px) {
-  .testimonials {
+  .testimonial-front-container {
     margin:0;
     flex-wrap: wrap;
   }
 
-  .testimonials > * {
+  .testimonial-front-container > * {
     align-self: center;
     margin: 0;
   }

@@ -9,39 +9,39 @@ import twitter from "../../assets/icons/Twitter_White.svg";
 export default function NavBar() {
   
   function toggle_menu() {
-    let toggle_menu = document.querySelector(".toggle-menu");
-    let menu = document.querySelector("#menu");
+    let toggle_menu = document.querySelector(".navbar-togmenubtn");
+    let menu = document.querySelector(".navbar-menu");
     toggle_menu.classList.toggle("active");
     menu.classList.toggle("open");
   }
 
   return (
-    <nav className="nav_bar">
-      <button className="toggle-menu" onClick={toggle_menu}>
+    <nav className="navbar">
+      <button className="navbar-togmenubtn" onClick={toggle_menu}>
         <span />
       </button>
-      <div id="menu">
-        <nav className="main-nav">
-              <a href="#Home_Anchor" className="nav-item" onClick={toggle_menu}>
+      <div className="navbar-menu">
+        <nav className="navbar-menu-main">
+              <a href="#Home_Anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
                 Home
               </a>
-              <a href="#Guided_Hands_Anchor" className="nav-item" onClick={toggle_menu}>
+              <a href="#Guided_Hands_Anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
                 Guided Hands&trade;
               </a>
-              <a href="#About_Anchor" className="nav-item" onClick={toggle_menu}>
+              <a href="#About_Anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
                 About
               </a>
-              <a href="#Achievements_Anchor" className="nav-item" onClick={toggle_menu}>
+              <a href="#Achievements_Anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
                 Achievements
               </a>
-              <a href="#Collaborators_Anchor" className="nav-item" onClick={toggle_menu}>
+              <a href="#Collaborators_Anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
                 Collaborators
               </a>
-              <a href="#Contact_Us_Anchor" className="nav-item" onClick={toggle_menu}>
+              <a href="#Contact_Us_Anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
                 Contact Us
               </a>
         </nav>
-        <footer className="menu-footer">
+        <footer className="navbar-menu-footer">
           <a
             href="https://www.facebook.com/ImaginAbleSolutions"
             id="facebook_container"
@@ -50,7 +50,6 @@ export default function NavBar() {
               src={facebook}
               id="facebook"
               alt="Facebook Icon"
-              className="social-icon"
             />
           </a>
           <a
@@ -61,7 +60,6 @@ export default function NavBar() {
               src={linkedin}
               id="linked"
               alt="LinkedIn Icon"
-              className="social-icon"
             />
           </a>
 
@@ -70,7 +68,6 @@ export default function NavBar() {
               src={twitter}
               id="twitter"
               alt="Twitter Icon"
-              className="social-icon"
               style={{ fill: "#fff" }}
             />
           </a>
@@ -83,7 +80,6 @@ export default function NavBar() {
               src={instagram}
               id="instagram"
               alt="Instagram Icon"
-              className="social-icon"
             />
           </a>
 
@@ -95,7 +91,6 @@ export default function NavBar() {
               src={email}
               id="email"
               alt="Email Icon"
-              className="social-icon"
             />
           </a>
         </footer>
