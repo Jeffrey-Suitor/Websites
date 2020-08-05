@@ -1,10 +1,10 @@
 import React from "react";
 import "./BottomBarComponent.css";
 
-import facebook from "../../assets/icons/Facebook_White.svg";
-import instagram from "../../assets/icons/Instagram_White.svg";
-import linkedin from "../../assets/icons/LinkedIn_White.svg";
-import twitter from "../../assets/icons/Twitter_White.svg";
+import facebook from "../../assets/icons/facebook_white.svg";
+import instagram from "../../assets/icons/instagram_white.svg";
+import linkedin from "../../assets/icons/linkedin_white.svg";
+import twitter from "../../assets/icons/twitter_white.svg";
 
 export default function BottomBarComponent() {
   return (

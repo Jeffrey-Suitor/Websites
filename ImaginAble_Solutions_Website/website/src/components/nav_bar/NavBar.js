@@ -1,10 +1,10 @@
 import React from "react";
 import "./NavBar.css";
-import email from "../../assets/icons/Email_White.svg";
-import facebook from "../../assets/icons/Facebook_White.svg";
-import instagram from "../../assets/icons/Instagram_White.svg";
-import linkedin from "../../assets/icons/LinkedIn_White.svg";
-import twitter from "../../assets/icons/Twitter_White.svg";
+import email from "../../assets/icons/email_white.svg";
+import facebook from "../../assets/icons/facebook_white.svg";
+import instagram from "../../assets/icons/instagram_white.svg";
+import linkedin from "../../assets/icons/linkedin_white.svg";
+import twitter from "../../assets/icons/twitter_white.svg";
 
 export default function NavBar() {
   
@@ -22,22 +22,22 @@ export default function NavBar() {
       </button>
       <div className="navbar-menu">
         <nav className="navbar-menu-main">
-              <a href="#Home_Anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
+              <a href="#home-anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
                 Home
               </a>
-              <a href="#Guided_Hands_Anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
+              <a href="#gh-anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
                 Guided Hands&trade;
               </a>
-              <a href="#About_Anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
+              <a href="#about-anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
                 About
               </a>
-              <a href="#Achievements_Anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
+              <a href="#achievements-anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
                 Achievements
               </a>
-              <a href="#Collaborators_Anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
+              <a href="#collaborators-anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
                 Collaborators
               </a>
-              <a href="#Contact_Us_Anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
+              <a href="#contact-us-anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
                 Contact Us
               </a>
         </nav>

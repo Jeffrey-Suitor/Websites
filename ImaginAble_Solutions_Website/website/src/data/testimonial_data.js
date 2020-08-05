@@ -4,7 +4,8 @@ import elissa from "../assets/images/elissa.png";
 import tarnopolsky from "../assets/images/tarnopolsky.png";
 import sam from "../assets/images/sam.png";
 import goran from "../assets/images/goran.png";
-import remilli from "../assets/images/remilli.png"
+import remilli from "../assets/images/remilli.png";
+import mcdonald from "../assets/images/mcdonald.png";
 
 const testimonials = [
   {
@@ -42,7 +43,7 @@ const testimonials = [
         <br />
         ImaginAble Solutions will help so many people and truly change lives for the better. "
       </p>
-    )
+    ),
   },
 
   {
@@ -71,7 +72,7 @@ const testimonials = [
         Hospital. His patient, a 12-year-old girl living with Dystonia uses Guided Hands&trade; during her math and art
         classes.
       </p>
-    )
+    ),
   },
 
   {
@@ -91,7 +92,7 @@ const testimonials = [
       </div>
     ),
 
-    button: false
+    button: false,
   },
 
   {
@@ -122,13 +123,13 @@ const testimonials = [
         problems faced by leaders in the manufacturing world. The MMRI’s world-class facilities allow our experienced
         staff to take on new challenges and provide results. <br />
         <br />
-        Our team of experts supported ImaginAble Solutions as they created Guided Hands&trade; , ensuring that the product
-        is fully capable of meeting customer needs. The MMRI team and advisors that worked alongside ImaginAble
+        Our team of experts supported ImaginAble Solutions as they created Guided Hands&trade; , ensuring that the
+        product is fully capable of meeting customer needs. The MMRI team and advisors that worked alongside ImaginAble
         Solutions to bring their product to the market are delighted with the company’s continued success. We are
         excited to continue to support such an impactful company that is making real changes to improve our community by
         providing individuals with a higher quality of life.”
       </p>
-    )
+    ),
   },
 
   {
@@ -166,8 +167,47 @@ const testimonials = [
         takes to make her venture succeed. I believe Guided Hands&trade; will make a positive difference for many
         people."
       </p>
-    )
-  }
+    ),
+  },
+
+  {
+    img: mcdonald,
+    alt_img_text: "Photo of Dr. Mcdonald",
+    body: (
+      <p>
+        "Guided Hands &trade; allows those with certain physical challenges to tap into their passions and be more
+        independent. The iBiomed Program is proud of Lianna and everything she has accomplished!"
+      </p>
+    ),
+
+    about: (
+      <div>
+        <a href="https://www.eng.mcmaster.ca/mech/people/faculty/colin-mcdonald#">
+          <p className="testimonial-front-about-name">Dr. Colin Mcdonald</p>
+        </a>
+        <p>
+          McMaster University Integrated Biomedical &amp; Health Sciences
+          <br />
+          Associate Director
+        </p>
+      </div>
+    ),
+
+    button: "Read More",
+    hear_more: (
+      <p>
+        "Through Guided Hands &trade;, ImaginAble Solutions has developed a device to positively impact the lifestyle of
+        others. Guided HandsTM allows those with certain physical challenges to tap into their passions and be more
+        independent.
+        <br />
+        <br />
+        ImaginAble Solutions is what happens when a bright mind seeks to help those in the community. The iBiomed
+        Program is proud of Lianna and everything she has accomplished!" <br />
+        The first prototype of Guided Hands&trade; was created by ImaginAble Solutions’ CEO & Founder, Lianna Genovese,
+        as her class project in the Integrated Biomedical Engineering & Health Sciences Program at McMaster University.
+      </p>
+    ),
+  },
 ];
 
 export default testimonials;

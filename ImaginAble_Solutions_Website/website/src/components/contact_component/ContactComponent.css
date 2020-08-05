@@ -12,7 +12,7 @@
   width: 100%;
 }
 
-#subscription_checkbox {
+#subscription-checkbox {
   display: none;
 }
 
@@ -29,8 +29,8 @@
   color: var(--accent-colour);
 }
 
-.subscription_active,
-.subscription_active:hover {
+.subscription-active,
+.subscription-active:hover {
   background-color: var(--approval-colour);
   color: var(--white-colour);
 }

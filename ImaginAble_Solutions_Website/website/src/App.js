@@ -13,22 +13,22 @@ import UsageIconComponent from "./components/usage_icon_component/usageIconCompo
 
 import guided_hands_video from "./assets/video/guided_hands.mp4";
 
-import guided_hands_image from "./assets/images/GuidedHands.jpg";
-import guided_hands_image_web from "./assets/images/guided_hands_new.png";
-import Tablet from "./assets/icons/Tablet.svg";
-import Paint from "./assets/icons/Paint.svg";
-import Write from "./assets/icons/Write.svg";
-import Draw from "./assets/icons/Draw.svg";
-import lianna from "./assets/images/Lianna_Profile.png";
-import heart_handshake from "./assets/icons/heart-handshake.svg";
-import imaginable_logo from "./assets/icons/imaginable-logo-short.jpg";
+import guided_hands_image from "./assets/images/guided_hands.jpg";
+import guided_hands_image_web from "./assets/images/guided_hands_render_hand.png";
+import Tablet from "./assets/icons/tablet.svg";
+import Paint from "./assets/icons/paint.svg";
+import Write from "./assets/icons/write.svg";
+import Draw from "./assets/icons/draw.svg";
+import lianna from "./assets/images/lianna_profile.png";
+import heart_handshake from "./assets/icons/heart_handshake.svg";
+import imaginable_logo from "./assets/icons/imaginable_logo_short.jpg";
 
-import mmri from "./assets/images/MMRI.png";
-import forge from "./assets/images/The Forge.jpg";
-import maceng from "./assets/images/McMaster Engineering.png";
+import mmri from "./assets/images/mmri.png";
+import forge from "./assets/images/the_forge_large_logo.jpg";
+import maceng from "./assets/images/mcmaster_engineering.png";
 import innovation_factory from "./assets/images/innovation_factory.png";
-import ibiomed from "./assets/images/iBioMed.jpg";
-import hhs from "./assets/images/Hamilton Health Sciences.jpg";
+import ibiomed from "./assets/images/ibiomed.jpg";
+import hhs from "./assets/images/hamilton_health_sciences.jpg";
 import dystonia_foundation from "./assets/images/dystonia_foundation.png";
 import medt from "./assets/images/medt.png";
 
@@ -102,50 +102,43 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className="Main">
+      <div className="main">
         <NavBar />
-        <div className="Logo">
-          <span className="anchor" id="Home_Anchor"></span>
-          <div className="Logo_Large_Lettering">ImaginAble</div>
-          <div className="Logo_Small_Lettering">Solutions Inc.</div>
+        <div className="logo">
+          <span className="anchor" id="home-anchor"></span>
+          <div className="logo-large-lettering">ImaginAble</div>
+          <div className="logo-small-lettering">Solutions Inc.</div>
         </div>
 
-        <video autoPlay muted controls className="Video">
+        <video autoPlay muted controls className="video">
           <source src={guided_hands_video} type="video/mp4" />
         </video>
 
         <div className="landing-text">
-          <h1 id="draw_again">"I can draw again!"</h1>
+          <h1 id="landing-text-header">"I can draw again!"</h1>
           <p>
             <b>Guided Hands&trade;</b> is an assistive device that enables people with limited fine motor skills to
             write, draw, and paint as well as type and scroll on a tablet or a computer.
             <br />
-            <a id="Contact_Us_Landing" href="#Contact_Us_Anchor">
+            <a id="landing-text-contact" href="#contact-us-anchor">
               Contact us
             </a>
           </p>
         </div>
 
-        <img
-          src={guided_hands_image_web}
-          alt="Guided Hands Product"
-          className="Guided_Hands_Product_Image"
-          id="Guided_Hands_Product_Image_Web"
-        />
+        <img src={guided_hands_image_web} alt="Guided Hands Product" id="gh-product-image-web" />
 
-        <div className="Mission">
-          <h1 className="Mission_Header">Our Mission</h1>
+        <div className="mission">
+          <h1 className="mission-header">Our Mission</h1>
 
-          <div className="Mission-content">
+          <div className="mission-content">
             <img className="mission-icon" src={imaginable_logo} alt="ImaginAble logo" />
-
-            <p className="Mission_Text">
+            <p>
               ImaginAble Solutions creates assistive devices for people living with impaired motor function to improve
               their quality of life during everyday activities.
               <br />
             </p>
             <img className="mission-icon" src={heart_handshake} alt="Heart handshake" />
-
             <p>
               Our mission is to provide our customers with the freedom and independence to live the life they had always
               imagined.
@@ -153,23 +146,18 @@ export default class App extends React.Component {
           </div>
         </div>
 
-        <div className="Guided_Hands">
-          <span className="anchor" id="Guided_Hands_Anchor"></span>
-          <h1 id="Guided_Hands">Guided Hands&trade;</h1>
+        <div className="guided-hands">
+          <span className="anchor" id="gh-anchor"></span>
+          <h1 id="guided-hands-title">Guided Hands&trade;</h1>
 
-          <img
-            src={guided_hands_image}
-            alt="Guided Hands Product"
-            className="Guided_Hands_Product_Image"
-            id="Guided_Hands_Product_Image_Mobile"
-          />
+          <img src={guided_hands_image} alt="Guided Hands Product" id="gh-product-image-mobile" />
 
-          <p id="Guided_Hands_Product_Text">
+          <p id="gh-product-text">
             Guided Hands&trade; is an assistive device that enables people with limited fine motor skills to write,
             draw, and paint as well as type and scroll on a tablet or a computer.
           </p>
 
-          <div className="Guided_Hands_Product_Help_You_Icons">
+          <div className="gh-product-use-icons">
             <UsageIconComponent img={Paint} alt="Paintbrush" text="Paint" />
             <UsageIconComponent img={Write} alt="Pencil" text="Write" />
             <UsageIconComponent img={Draw} alt="Tablet" text="Draw" />
@@ -199,7 +187,6 @@ export default class App extends React.Component {
               num_dots={this.state.product_images}
               active={this.state.current_product_image}
               changeActive={this.product_image_carousel_change}
-              id="Product_Image_Dots"
             />
           </div>
 
@@ -220,9 +207,7 @@ export default class App extends React.Component {
           </div>
         </div>
 
-        <div className="Testimonials">
-          <span className="anchor" id="Testimonials_Anchor" />
-
+        <div className="testimonials">
           <h1 id="testimonials-header">Testimonials</h1>
           <CarouselComponent
             return_func={this.testimonial_carousel_change}
@@ -236,25 +221,24 @@ export default class App extends React.Component {
             num_dots={this.state.testimonials}
             active={this.state.current_testimonial}
             changeActive={this.testimonial_carousel_change}
-            id="testimonials-dots"
           />
         </div>
 
-        <div className="About">
-          <span className="anchor" id="About_Anchor"></span>
+        <div className="about">
+          <span className="anchor" id="about-anchor"></span>
           <h1>About</h1>
-          <div className="Lianna_Image_Container">
-            <img src={lianna} alt="Lianna" id="Lianna_Image" />
-            <div className="Lianna_Text_Container">
-              <h1 id="Lianna_Title_Text">Lianna Genovese</h1>
+          <div className="about-image-container">
+            <img src={lianna} alt="Lianna" id="about-image" />
+            <div className="about-text-container">
+              <h1 id="about-text-name">Lianna Genovese</h1>
               <h4>CEO &amp; Founder</h4>
-              <p id="Program_Text">
-                Biomedical &amp; Mechanical Engineering Grad 2022
+              <p id="about-text-program">
+                Biomedical &amp; Mechanical Engineering
                 <br />
                 McMaster University
               </p>
 
-              <button id="Our_Story_Button" onClick={this.show_modal}>
+              <button id="our-story-button" onClick={this.show_modal}>
                 Lianna's Story
               </button>
               <ModalComponent
@@ -264,31 +248,25 @@ export default class App extends React.Component {
                 content={our_story.our_story}
               />
             </div>
-            <div className="abstract">
+            <div className="about-abstract-shape">
               <div />
             </div>
           </div>
         </div>
 
-        <div className="Achievements">
-          <span className="anchor" id="Achievements_Anchor"></span>
+        <div className="achievements">
+          <span className="anchor" id="achievements-anchor"></span>
           <h1>Achievements</h1>
           <AchievementComponentContainer />
         </div>
 
         <div className="collaborators">
-          <span className="anchor" id="Collaborators_Anchor"></span>
+          <span className="anchor" id="collaborators-anchor"></span>
           <h1>Collaborators</h1>
           <div className="collaborators-image-container">
-            {/*
             <a href="https://dystoniacanada.org/">
-              <img
-                src={dystonia_foundation}
-                alt="Dystonia Medical Research Foundation"
-                className="collaborators-image"
-              />
+              <img src={dystonia_foundation} alt="Dystonia Medical Research Foundation" className="collaborators-image"/>
             </a>
-            */}
             <a href="https://www.eng.mcmaster.ca/mcmaster-manufacturing-research-institute-mmri">
               <img src={mmri} alt="McMaster Manufacturing Research Institute" className="collaborators-image" />
             </a>
@@ -313,8 +291,8 @@ export default class App extends React.Component {
           </div>
         </div>
 
-        <div className="Contact_Us">
-          <span className="anchor" id="Contact_Us_Anchor"></span>
+        <div className="contact-us">
+          <span className="anchor" id="contact-us-anchor"></span>
           <h1>Contact Us</h1>
           <ContactComponent />
           <BottomBar />

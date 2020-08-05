@@ -1,41 +1,55 @@
 import React from "react";
 import elissa from "../assets/images/elissa_modal.jpg";
+import lianna_machining from "../assets/images/lianna_machining.jpg";
+import guided_hands_painting from "../assets/images/gh-paint.png";
 
 const our_story = {
   our_story: (
     <div>
       <div className="image-text-wrapper">
-        <img src={elissa} align="left" alt="Lianna and Elissa" />
+        <img src={elissa} align="right" alt="Lianna and Elissa" />
         <p>
-          In April 2017, I met Elissa, a student living with Dystonia, a neurological movement disorder. She experiences
-          limited hand mobility, arm and muscle weakness and the inability to hold and control a writing utensil. Before
-          her condition worsened, she was a talented painter but now, she cannot hold onto a paintbrush. Her condition
-          affects her mobility in daily activities and leads to emotional consequences such as a loss of independence
-          and educational difficulties. Elissa inspired me to invent the first prototype of Guided Hands&trade; as my
-          final school project at McMaster University. <br />
+          My journey began in 2017 when I met Elissa, a woman living with primary generalized dystonia. She experiences
+          involuntary curling of her fingers, hand and arm fatigue, and limited hand mobility, making holding and using
+          writing utensils impossible. Before her condition worsened, she was a talented painter but now, she cannot
+          grasp a paintbrush. This was a devastating emotional loss that stripped away her passion and creativity.
+          Hearing Elissa’s story inspired me to create the first prototype of Guided Hands&trade; in my first year at
+          McMaster University. <br />
         </p>
       </div>
 
       <p>
-        <br /> By May 2019, I redesigned, manufactured and introduced Guided Hands&trade; to patients and medical
-        professionals in hospital clinics, rehabilitation centres, nursing homes and retirement homes. Guided
-        Hands&trade; had given the patients hope and happiness as they painted, wrote, coloured or played games on an
-        iPad. The device is capable of reigniting one’s passion or simply giving them the ability to express themselves
-        in their own creative and independent way! The positive feedback received from Guided Hands&trade; encouraged me
-        to continue developing my project. <br />
+        <br /> Fuelled by the passion from my project, I decided to continue my innovation journey in the summer of
+        2019. I became an undergraduate researcher at McMaster Manufacturing Research Institute. Supported by a strong
+        network of professional engineers and machinists, I applied my hands-on skills to redesign, manufacture and
+        invent Guided Hand&trade;. <br />
       </p>
       <br />
 
+      <img src={lianna_machining} align="left" alt="Lianna Machining" />
+
       <p>
-        In August 2019, armed with paint supplies and Guided Hands&trade;, I joined a 12-year-old little girl living
-        with Dystonia and her family at their doctor’s appointment. As soon as she began painting, the widest smile
-        spread across her face. She turned to her mom and said, “Mom I want one” and her mom turned to me and asked,
-        “How much is it?”. At that point, the thought of selling the device had never even crossed my mind. However,
-        with the passion and drive to help more children and adults like her, I created ImaginAble Solutions.
+        Immediately, I introduced Guided Hands&trade; to over 150 patients and medical professionals in hospital
+        clinics, rehabilitation centres, nursing homes and retirement homes. I worked alongside patients to get their
+        input on the design to ensure that all of their needs were met. Guided Hands&trade; had given the patients hope
+        and happiness as they painted, wrote, coloured and played games on an iPad. The patients had said that Guided
+        Hands™ gave them back their freedom of expression and enhanced their quality of life. As well, Elissa’s passion
+        was reignited as she was finally able to do what she loves once again.
       </p>
+      <img src={guided_hands_painting} align="right" alt="Guided Hands In Use" />
+
       <p>
-        <br /> Today, my team and I are encouraged to grow our company to provide Guided Hands&trade; to those that
-        imagine a life of independence and opportunity.
+        <br /> Inspiration struck again in August 2019 when Dr. Mark Tarnopolsky, Division Head of the Neuromuscular and
+        Neurometabolic Disorders Clinic at McMaster Children’s Hospital, invited me to join Bella, a 12-year-old girl
+        living with Cerebral Palsy at her doctor’s appointment. Armed with paint supplies, I introduced Guided Hands™ to
+        her and as soon as she began painting, a smile of true joy spread across her face. She turned to her mom and
+        said, “Mom I want one” and her mom turned to me and asked, “How much is it?”. At that point, the thought of
+        selling Guided Hands™ had never even crossed my mind. However, with the passion and drive to help more people, I
+        created ImaginAble Solutions.
+        <br />
+        <br />
+        Today, my team and I continue to grow our company to enable people like Elissa and Bella to live the life they
+        had always imagined!
       </p>
     </div>
   ),

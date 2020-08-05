@@ -96,9 +96,9 @@ export default class ContactComponent extends React.Component {
     let status = !this.state.email_subscription;
 
     if (status) {
-      subscription.classList.add("subscription_active");
+      subscription.classList.add("subscription-active");
     } else {
-      subscription.classList.remove("subscription_active");
+      subscription.classList.remove("subscription-active");
     }
     this.setState({ email_subscription: status });
   }
@@ -152,10 +152,10 @@ export default class ContactComponent extends React.Component {
             type="checkbox"
             value={this.state.email_subscription}
             onChange={this.onSubscriptionChange}
-            id="subscription_checkbox"
+            id="subscription-checkbox"
           />
-          <label htmlFor="subscription_checkbox" className="subscription contact-form-control">
-            Subscribe to our email list
+          <label htmlFor="subscription-checkbox" className="subscription contact-form-control">
+            Subscribe to our newsletter
           </label>
 
           <div className="contact-progress-button">

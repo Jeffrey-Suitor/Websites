@@ -1,10 +1,10 @@
 import React from "react";
 import enactus from "../assets/images/enactus.png";
-import forge from "../assets/images/forge.jpg";
+import forge from "../assets/images/the_forge.jpg";
 import innovation_nation from "../assets/images/innovation_nation.png";
 import synapse from "../assets/images/synapse.png";
-import universitas from "../assets/images/Universitas21.jpg";
-import mmri from "../assets/images/MMRI.png";
+import universitas from "../assets/images/universitas.jpg";
+import mmri from "../assets/images/mmri.png";
 import innovation_factory from "../assets/images/innovation_factory.png";
 import idea from "../assets/images/idea.jpg";
 
@@ -56,7 +56,7 @@ const achievements = [
     logo: universitas,
     link:
       "https://dailynews.mcmaster.ca/articles/mcmaster-student-wins-prestigious-global-innovation-award/",
-    alt_img_text: "RISE logo",
+    alt_img_text: "Universitas Logo",
     date: "January 2020",
     place: <h3>Most Innovative</h3>,
     body: "Universities 21 RISE Global Competition ",
@@ -66,7 +66,7 @@ const achievements = [
     logo: mmri,
     link:
       "https://www.eng.mcmaster.ca/mcmaster-manufacturing-research-institute-mmri#Our-Success-Stories-",
-    alt_img_text: "Ontario Advanced Manufacturing Consortium logo",
+    alt_img_text: "McMaster Manufacturing Research Institute",
     date: "December 2019",
     place: <h3>Success Story</h3>,
     body: "Featured by McMaster Manufacturing Research Institute",

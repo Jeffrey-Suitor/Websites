@@ -11,10 +11,10 @@ import testimonials from "../../data/testimonial_data";
 import "./ImageSlideshowComponent.css";
 import handpiece from "../../assets/images/handpiece.png";
 import guided_hands_render from "../../assets/images/guided_hands_render.png";
-import guided_hands_draw from "../../assets/images/GH-Drawing.png";
-import guided_hands_ipad from "../../assets/images/GH-Ipad.png";
-import guided_hands_paint from "../../assets/images/GH-Paint.png";
-import guided_hands_writing from "../../assets/images/GH-Writing.png";
+import guided_hands_draw from "../../assets/images/gh-drawing.png";
+import guided_hands_ipad from "../../assets/images/gh-ipad.png";
+import guided_hands_paint from "../../assets/images/gh-paint.png";
+import guided_hands_writing from "../../assets/images/gh-writing.png";
 
 
 import { Swipeable } from "react-swipeable";
@@ -62,44 +62,44 @@ export default class CarouselComponent extends React.Component {
   render() {
     if (this.props.type === "testimonial_carousel") {
       return (
-        <div className="Testimonial_Carousel">
-          <button id="testimonial_carousel_left" onClick={() => this.go_next(-1)}>
+        <div className="testimonial-carousel">
+          <button className="testimonial-carousel-button" onClick={() => this.go_next(-1)}>
             <img src={left_chevron} alt="Left Chevron" />
           </button>
-          <div className="testimonials_container">
+          <div className="testimonials-container">
             {testimonials.map((item, index) => {
               item.key = "testimonial-".concat(index.toString());
               return (
                 <div
                   key={index}
-                  className="testimonial_parent"
+                  className="testimonial-parent"
                   style={{ transform: `translateX(${this.state.diff}%)` }}
                   onClick={() => this.go_next(0)}>
                   <Swipeable
                     onSwipedRight={() => this.go_next(1)}
                     onSwipedLeft={() => this.go_next(1)}
-                    className="Swipeable">
+                    className="swipeable">
                     <TestimonialComponent data={item}/>
                   </Swipeable>
                 </div>
               );
             })}
           </div>
-          <button id="testimonial_carousel_right" onClick={() => this.go_next(1)}>
+          <button className="testimonial-carousel-button" onClick={() => this.go_next(1)}>
             <img src={right_chevron} alt="Right Chevron" />
           </button>
         </div>
       );
     } else if (this.props.type === "image_slideshow_carousel") {
       return (
-        <div className="product_carousel">
-          <button id="image_carousel_left" onClick={() => this.go_next(-1)}>
+        <div className="product-carousel">
+          <button className="image-carousel-button" onClick={() => this.go_next(-1)}>
             <img src={left_chevron} alt="Left Chevron" />
           </button>
-          <div className="product_carousel_images">
+          <div className="product-carousel-images">
             {images.map((item, index) => {
               return (
-                <div key={index} className="product_image" style={{ transform: `translateX(${this.state.diff}%)` }}>
+                <div key={index} className="product-image" style={{ transform: `translateX(${this.state.diff}%)` }}>
                   <Swipeable
                     onSwipedRight={() => this.go_next(-1)}
                     onSwipedLeft={() => this.go_next(1)}
@@ -110,7 +110,7 @@ export default class CarouselComponent extends React.Component {
               );
             })}
           </div>
-          <button id="image_carousel_right" onClick={() => this.go_next(1)}>
+          <button className="image-carousel-button" onClick={() => this.go_next(1)}>
             <img src={right_chevron} alt="Right Chevron" />
           </button>
         </div>

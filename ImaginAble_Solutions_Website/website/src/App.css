@@ -32,7 +32,7 @@
   font-family: "Montserrat";
 }
 
-.Main {
+.main {
   width: var(--max-view);
   margin: 0 var(--main-margin);
   position: relative;
@@ -97,8 +97,7 @@ h1 {
 }
 
 p,
-li,
-#Guided_Hands_Product_Help_You_YOU {
+li {
   --min-font: 13;
   --min-font-px: 13px;
   --max-font: 18;
@@ -144,7 +143,7 @@ ul {
   border-radius: 2px;
 }
 
-.Logo {
+.logo {
   margin: 20px auto 30px auto;
   width: fit-content;
   background-color: var(--white-colour);
@@ -152,7 +151,7 @@ ul {
   grid-area: logo;
 }
 
-.Logo_Large_Lettering {
+.logo-large-lettering {
   --min-font: 50;
   --min-font-px: 50px;
   --max-font: 80;
@@ -160,7 +159,7 @@ ul {
   font-family: var(--logo-lettering);
 }
 
-.Logo_Small_Lettering {
+.logo-small-lettering {
   --min-font: 16;
   --min-font-px: 16px;
   --max-font: 30;
@@ -170,7 +169,7 @@ ul {
   margin-top: -0.65em;
 }
 
-.Video {
+.video {
   position: relative;
   margin: 0 auto;
   max-width: 100%;
@@ -178,11 +177,11 @@ ul {
   grid-area: video;
 }
 
-.Mission {
+.mission {
   grid-area: mission;
 }
 
-.Mission-content {
+.mission-content {
   display: grid;
   grid-template-columns: minmax(0, 50px) 1fr;
   grid-template-rows: 1fr 1fr;
@@ -194,15 +193,15 @@ ul {
   width: 100%;
 }
 
-.Testimonials {
+.testimonials {
   grid-area: testimonials;
 }
 
-.About {
+.about {
   grid-area: about;
 }
 
-.Achievements {
+.achievements {
   grid-area: achievements;
 }
 
@@ -210,11 +209,11 @@ ul {
   grid-area: collaborators;
 }
 
-.Contact_Us {
+.contact-us {
   grid-area: contact;
 }
 
-.Guided_Hands {
+.guided-hands {
   grid-area: guided-hands;
 }
 
@@ -224,31 +223,17 @@ ul {
   grid-area: landing-text;
 }
 
-.Guided_Hands_Product_Image {
-  border-radius: 5%;
-  width: auto;
-  max-height: 400px;
-  max-width: 90%;
-  grid-area: guided-hands-product-image;
-}
-
-#Guided_Hands_Product_Image_Web {
+#gh-product-image-web {
   display: none;
   visibility: hidden;
   grid-area: guided-hands-product-image-web;
 }
 
-#Guided_Hands_Product_Text {
+#gh-product-text {
   padding: 1.5em 0;
 }
 
-#Guided_Hands_Product_Help_You_YOU {
-  display: inline;
-  color: var(--accent-colour);
-  background-color: unset;
-}
-
-.Guided_Hands_Product_Help_You_Icons {
+.gh-product-use-icons {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -260,7 +245,7 @@ ul {
   grid-area: guided-hands-icons;
 }
 
-.Guided_Hands_Product_Help_You_Icons > * {
+.gh-product-use-icons > * {
   place-self: center;
 }
 
@@ -302,22 +287,22 @@ ul {
   margin: 3em 0 1em 0;
 }
 
-#Lianna_Image {
+#about-image {
   max-width: 320px;
   width: 30vw;
 }
 
-.Lianna_Text_Container > * {
+.about-text-container > * {
   text-align: center;
 }
 
-#Program_Text {
+#about-text-program {
   padding: 5px;
   --min-font: 12;
   --min-font-px: 12px;
 }
 
-#Lianna_Title_Text {
+#about-text-name {
   margin: 0;
   margin-bottom: 0.25em;
   --min-font: 22;
@@ -325,7 +310,7 @@ ul {
   --max-font: 35;
 }
 
-#Our_Story_Button {
+#our-story-button {
   margin-top: 1em;
 }
 
@@ -363,7 +348,7 @@ ul {
 }
 
 @media (min-width: 600px) {
-  .Lianna_Image_Container {
+  .about-image-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -372,12 +357,12 @@ ul {
     width: 100%;
   }
 
-  .Lianna_Text_Container > * {
+  .about-text-container > * {
     text-align: left;
     display: grid;
   }
 
-  #Lianna_Image {
+  #about-image {
     padding-right: calc(10px + 4%);
   }
 }
@@ -391,7 +376,7 @@ ul {
     border-radius: 8px;
   }
 
-  .Lianna_Image_Container {
+  .about-image-container {
     margin: 0 0 0 20px;
   }
 
@@ -407,7 +392,7 @@ ul {
     padding: 20px;
   }
 
-  #Our_Story_Button {
+  #our-story-button {
     margin-bottom: 0;
   }
 
@@ -423,7 +408,7 @@ ul {
 
 @media (min-width: 1200px) {
 
-  .Mission_Header{
+  .mission-header{
     margin: 0.5em 0;
   }
 
@@ -437,7 +422,7 @@ ul {
     line-height: 26pt;
   }
 
-  #draw_again {
+  #landing-text-header {
     --min-font: 25;
     --min-font-px: 25px;
     --max-font: 40;
@@ -447,7 +432,7 @@ ul {
     text-align: left;
   }
 
-  .About {
+  .about {
     margin-bottom: 20px;
   }
 
@@ -456,17 +441,17 @@ ul {
     visibility: visible;
   }
 
-  #Home_Anchor {
+  #home-anchor {
     margin-top: calc(var(--top-nav-height) * -1);
   }
 
-  #Contact_Us_Landing {
+  #landing-text-contact {
     color: var(--accent-colour);
     font-weight: bold;
     text-decoration: underline;
   }
 
-  .Main {
+  .main {
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
       ". ."
@@ -487,7 +472,7 @@ ul {
     align-items: center;
   }
 
-  .Video {
+  .video {
     left: 50%;
     transform: translate(-50%, 0);
     margin: 0;
@@ -498,12 +483,12 @@ ul {
     margin-top: 10px;
   }
 
-  .Logo {
+  .logo {
     margin: 0;
     align-self: flex-start;
   }
 
-  .Guided_Hands {
+  .guided-hands {
     display: grid;
     grid-template-areas:
       "guided-hands-anchor guided-hands-anchor"
@@ -518,11 +503,11 @@ ul {
     position: relative;
   }
 
-  #Guided_Hands {
+  #guided-hands-title {
     grid-area: guided-hands-title;
   }
 
-  #Guided_Hands,
+  #guided-hands-title,
   .guided-hands-conditions {
     color: var(--white-colour);
     position: relative;
@@ -531,7 +516,7 @@ ul {
     padding: 40px 0 0 0;
   }
 
-  #Guided_Hands:before,
+  #guided-hands-title:before,
   .guided-hands-conditions:before {
     content: "";
     position: absolute;
@@ -549,23 +534,16 @@ ul {
     opacity: 0.7;
   }
 
-  #Guided_Hands_Anchor {
+  #gh-anchor {
     grid-area: guided-hands-anchor;
   }
 
-  .Guided_Hands_Product_Image {
-    max-height: none;
-    max-width: none;
-    width: 100%;
-    grid-area: guided-hands-product-image;
-  }
-
-  #Guided_Hands_Product_Image_Mobile {
+  #gh-product-image-mobile {
     display: none;
     visibility: hidden;
   }
 
-  #Guided_Hands_Product_Image_Web {
+  #gh-product-image-web {
     display: block;
     visibility: visible;
     width: 400px;
@@ -573,7 +551,7 @@ ul {
     margin: auto;
   }
 
-  .Guided_Hands_Product_Help_You_Icons {
+  .gh-product-use-icons {
     padding: 0;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -603,21 +581,21 @@ ul {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  #Guided_Hands_Product_Text {
+  #gh-product-text {
     display: none;
   }
 
-  .Mission {
+  .mission {
     width: 95%;
     margin: auto;
     margin-top: 0;
   }
 
-  .Lianna_Text_Container {
+  .about-text-container {
     width: 650px;
   }
 
-  .abstract {
+  .about-abstract-shape {
     border-radius: 50% 50% 100% 0% / 42% 0% 100% 58%;
     width: 400px;
     height: 400px;
