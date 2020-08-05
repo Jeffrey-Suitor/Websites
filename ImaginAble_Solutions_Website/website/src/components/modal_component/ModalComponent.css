@@ -57,15 +57,16 @@
 }
 
 .modal-content img {
-  width: 60%;
-  margin: 10px 10px 0 0;
+  width: 100%;
+  margin: 10px 0;
   border-radius: 10px;
+  display: block;
 }
 
 @media (min-width: 800px) {
   .modal-content img {
     width: 45%;
-    margin: 0.5em 20px 0 0;
+    margin: 1em;
   }
   .modal {
     width: 90%;

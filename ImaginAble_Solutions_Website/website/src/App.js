@@ -55,9 +55,9 @@ export default class App extends React.Component {
     this.handleResize = debounce(this.handleResize.bind(this), 50);
     this.state = {
       current_testimonial: 0,
-      testimonials: 5,
+      testimonials: 6,
       testimonials_multiplier: -100,
-      total_testimonials: 5,
+      total_testimonials: 6,
 
       current_product_image: 0,
       product_images: 6,

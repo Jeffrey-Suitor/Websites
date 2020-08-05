@@ -159,7 +159,7 @@ export default class ContactComponent extends React.Component {
           </label>
 
           <div className="contact-progress-button">
-            <button type="submit">
+            <button type="submit" className="contact-progress-button-submit">
               Submit
             </button>
             <svg className="progress-circle" width="70" height="70">

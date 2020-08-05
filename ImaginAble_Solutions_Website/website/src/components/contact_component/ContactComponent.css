@@ -33,6 +33,7 @@
 .subscription-active:hover {
   background-color: var(--approval-colour);
   color: var(--white-colour);
+  border-color: var(--approval-colour);
 }
 
 .contact-form {
@@ -68,6 +69,16 @@
 }
 
 /* SUBMISSION BUTTON */
+
+.contact-progress-button-submit {
+  background-color: var(--accent-colour);
+  color: var(--white-colour);
+}
+
+.contact-progress-button-submit:hover {
+  background-color: var(--highlight-colour);
+  border-color: var(--highlight-colour);
+}
 
 /* Button container */
 .contact-progress-button {
@@ -191,5 +202,10 @@
   .contact-progress-button {
     text-align: center;
     width: 100%;
+  }
+
+  .subscription {
+    --min-font: 4;
+    --min-font-px: 4px;
   }
 }

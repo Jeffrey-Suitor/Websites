@@ -1,9 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import left_chevron from "../../assets/icons/left_chevron.svg";
-import right_chevron from "../../assets/icons/right_chevron.svg";
-
 import "./TestimonialCarouselComponent.css";
 import TestimonialComponent from "../testimonials/TestimonialComponent";
 import testimonials from "../../data/testimonial_data";
@@ -16,6 +13,7 @@ import guided_hands_ipad from "../../assets/images/gh-ipad.png";
 import guided_hands_paint from "../../assets/images/gh-paint.png";
 import guided_hands_writing from "../../assets/images/gh-writing.png";
 
+import "./ArrowPopAnimation.css";
 
 import { Swipeable } from "react-swipeable";
 
@@ -62,10 +60,10 @@ export default class CarouselComponent extends React.Component {
   render() {
     if (this.props.type === "testimonial_carousel") {
       return (
-        <div className="testimonial-carousel">
-          <button className="testimonial-carousel-button" onClick={() => this.go_next(-1)}>
-            <img src={left_chevron} alt="Left Chevron" />
-          </button>
+        <div className="testimonial-carousel arrow-pop-animation">
+          <div class="prev testimonial-carousel-button" onClick={() => this.go_next(-1)}>
+            <span class="icon-wrap"></span>
+          </div>
           <div className="testimonials-container">
             {testimonials.map((item, index) => {
               item.key = "testimonial-".concat(index.toString());
@@ -79,23 +77,23 @@ export default class CarouselComponent extends React.Component {
                     onSwipedRight={() => this.go_next(1)}
                     onSwipedLeft={() => this.go_next(1)}
                     className="swipeable">
-                    <TestimonialComponent data={item}/>
+                    <TestimonialComponent data={item} />
                   </Swipeable>
                 </div>
               );
             })}
           </div>
-          <button className="testimonial-carousel-button" onClick={() => this.go_next(1)}>
-            <img src={right_chevron} alt="Right Chevron" />
-          </button>
+          <div class="next testimonial-carousel-button" onClick={() => this.go_next(1)}>
+            <span class="icon-wrap"></span>
+          </div>
         </div>
       );
     } else if (this.props.type === "image_slideshow_carousel") {
       return (
-        <div className="product-carousel">
-          <button className="image-carousel-button" onClick={() => this.go_next(-1)}>
-            <img src={left_chevron} alt="Left Chevron" />
-          </button>
+        <div className="product-carousel arrow-pop-animation">
+          <div class="prev image-carousel-button" onClick={() => this.go_next(-1)}>
+            <span class="icon-wrap"></span>
+          </div>
           <div className="product-carousel-images">
             {images.map((item, index) => {
               return (
@@ -110,9 +108,9 @@ export default class CarouselComponent extends React.Component {
               );
             })}
           </div>
-          <button className="image-carousel-button" onClick={() => this.go_next(1)}>
-            <img src={right_chevron} alt="Right Chevron" />
-          </button>
+          <div class="next image-carousel-button" onClick={() => this.go_next(1)}>
+            <span class="icon-wrap"></span>
+          </div>
         </div>
       );
     }
