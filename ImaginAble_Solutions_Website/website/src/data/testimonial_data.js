@@ -69,7 +69,7 @@ const testimonials = [
     hear_more: (
       <p>
         Dr. Tarnopolsky has adopted Guided Hands&trade; into the Neuromuscular Disease Clinic at McMaster Children’s
-        Hospital. His patient, a 12-year-old girl living with Dystonia uses Guided Hands&trade; during her math and art
+        Hospital. His patient, a 12-year-old girl named Bella, lives with Dystonia and uses Guided Hands&trade; during her math and art
         classes.
       </p>
     ),

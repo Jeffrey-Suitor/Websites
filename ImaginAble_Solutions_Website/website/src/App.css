@@ -10,7 +10,7 @@
   --white-colour: white;
   --approval-colour: #1ecd97;
   --rejection-colour: #fb797e;
-  --highlight-colour: #33e7f5;
+  --highlight-colour: #008794;
   --border-radius: 50px;
   --menu-change: 800px;
   --logo-lettering: "Bookman Old Style", "Montserrat";
@@ -338,6 +338,10 @@ ul {
   padding: calc(5px + 1%) 10px;
   object-fit: contain;
   max-height: 200px;
+}
+
+.collaborators-image:hover {
+  transform: scale(1.01);
 }
 
 .collaborators a {

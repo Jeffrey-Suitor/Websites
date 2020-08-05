@@ -4,12 +4,12 @@
   --min-font-px: 10px;
   --max-font: 30;
   font-size: calc(var(--min-font-px) + (var(--max-font) - var(--min-font)) * var(--scalar));
-  text-indent: 20px;
   border: 2px solid var(--accent-colour);
   padding: 10px 0;
   text-align: left;
   margin: 0;
   width: 100%;
+  padding-left: 20px;
 }
 
 #subscription-checkbox {
@@ -19,7 +19,6 @@
 .subscription {
   --min-font: 8;
   --min-font-px: 8px;
-  text-indent: 0;
   padding: 0 20px;
   display: flex;
   align-items: center;

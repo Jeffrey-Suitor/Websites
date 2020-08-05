@@ -69,6 +69,11 @@
   transform: scale(1.05);
 }
 
+.botbar-email:hover,
+.botbar-location:hover {
+  transform: scale(1.01);
+}
+
 .botbar-web-email {
   display: none;
 }

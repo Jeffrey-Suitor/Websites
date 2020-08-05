@@ -11,7 +11,7 @@ export default function BottomBarComponent() {
     <div className="botbar">
       <div>
         <a href="https://www.google.com/maps/place/175+Longwood+Rd+S,+Hamilton,+ON+L8P+0A1/@43.2568101,-79.9028297,17z/data=!3m1!4b1!4m5!3m4!1s0x882c9b433e06732d:0x3e7d2474487bb55b!8m2!3d43.2568062!4d-79.900641">
-          <p>
+          <p  className="botbar-location">
             ImaginAble Solutions
             <br />
             175 Longwood Road South
@@ -24,7 +24,7 @@ export default function BottomBarComponent() {
 
         <div className="botbar-mobile-email">
           <a href="mailto:info@imaginablesolutions.ca">
-            <p>info@imaginablesolutions.ca</p>
+            <p className="botbar-email">info@imaginablesolutions.ca</p>
           </a>
           <p className="botbar-copyright">&copy; 2020 ImaginAble Solutions</p>
         </div>
@@ -50,7 +50,7 @@ export default function BottomBarComponent() {
 
       <div className="botbar-web-email">
         <a href="mailto:info@imaginablesolutions.ca">
-          <p>info@imaginablesolutions.ca</p>
+          <p className="botbar-email">info@imaginablesolutions.ca</p>
         </a>
         <p className="botbar-copyright">© 2020 ImaginAble Solutions</p>
       </div>
