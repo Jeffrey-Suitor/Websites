@@ -202,7 +202,9 @@ export default class App extends React.Component {
               <li>ALS</li>
               <li>Spinal Cord Injuries</li>
               <li>Strokes</li>
-              <li>And more</li>
+              <li>Parkinson’s Disease</li>
+              <li>Essential Tremor</li>
+              <li>Multiple Sclerosis</li>
             </ul>
           </div>
         </div>
