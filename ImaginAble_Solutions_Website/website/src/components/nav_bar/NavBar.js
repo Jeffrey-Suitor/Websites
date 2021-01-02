@@ -40,6 +40,9 @@ export default function NavBar() {
               <a href="#contact-us-anchor" className="navbar-menu-main-link" onClick={toggle_menu}>
                 Contact Us
               </a>
+              <a href="https://forms.gle/ozv4tSYMWrTcK7z77" className="navbar-menu-main-link navbar-menu-main-link-order" onClick={toggle_menu}>
+                Pre-Order Now
+              </a>
         </nav>
         <footer className="navbar-menu-footer">
           <a

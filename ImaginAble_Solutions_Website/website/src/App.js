@@ -120,10 +120,10 @@ export default class App extends React.Component {
             <b>Guided Hands&trade;</b> is an assistive device that enables people with limited fine motor skills to
             write, draw, and paint as well as type and scroll on a tablet or a computer.
             <br />
-            <a id="landing-text-contact" href="#contact-us-anchor">
-              Contact us
-            </a>
           </p>
+          <a href="https://forms.gle/ozv4tSYMWrTcK7z77">
+              <button className="landing-text-order-now">Pre-Order now</button>
+            </a>
         </div>
 
         <img src={guided_hands_image_web} alt="Guided Hands Product" id="gh-product-image-web" />
@@ -267,7 +267,11 @@ export default class App extends React.Component {
           <h1>Collaborators</h1>
           <div className="collaborators-image-container">
             <a href="https://dystoniacanada.org/">
-              <img src={dystonia_foundation} alt="Dystonia Medical Research Foundation" className="collaborators-image"/>
+              <img
+                src={dystonia_foundation}
+                alt="Dystonia Medical Research Foundation"
+                className="collaborators-image"
+              />
             </a>
             <a href="https://www.eng.mcmaster.ca/mcmaster-manufacturing-research-institute-mmri">
               <img src={mmri} alt="McMaster Manufacturing Research Institute" className="collaborators-image" />

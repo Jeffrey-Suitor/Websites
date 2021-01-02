@@ -11,6 +11,7 @@
   --approval-colour: #1ecd97;
   --rejection-colour: #fb797e;
   --highlight-colour: #008794;
+  --order-colour: #FF914D;
   --border-radius: 50px;
   --menu-change: 800px;
   --logo-lettering: "Bookman Old Style", "Montserrat";
@@ -222,6 +223,18 @@ ul {
   display: none;
   visibility: hidden;
   grid-area: landing-text;
+}
+
+.landing-text-order-now {
+  margin: 20px auto;
+  color: var(--white-colour);
+  border-color: var(--order-colour);
+  background-color: var(--order-colour);
+}
+
+.landing-text-order-now:hover {
+  background-color: var(--approval-colour);
+  border-color: var(--approval-colour);
 }
 
 #gh-product-image-web,

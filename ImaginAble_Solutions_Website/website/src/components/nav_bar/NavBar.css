@@ -11,8 +11,10 @@
     var(--min-font-px) + (var(--max-font) - var(--min-font)) * var(--scalar)
   );
   font-weight: bold;
-  padding: 1rem 1rem;
+  height: 50px;
+  line-height: 50px;
 }
+
 .navbar-menu .navbar-menu-footer:hover a,
 .navbar-menu .navbar-menu-main:hover a {
   opacity: 0.5;

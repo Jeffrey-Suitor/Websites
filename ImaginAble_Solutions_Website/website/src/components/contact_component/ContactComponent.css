@@ -46,7 +46,26 @@
     "phone phone"
     "email email"
     "message message"
-    "subscription submit";
+    "subscription submit"
+    "order .";
+}
+
+.contact-order-now{
+  --min-font: 20;
+  --min-font-px: 20px;
+  --max-font: 60;
+  font-size: calc(var(--min-font-px) + (var(--max-font) - var(--min-font)) * var(--scalar));
+  margin: 2% 0 1% 0;
+  width: 100%;
+  color: var(--white-colour);
+  border-color: var(--order-colour);
+  background-color: var(--order-colour);
+  grid-area: order;
+}
+
+.contact-order-now:hover {
+  background-color: var(--approval-colour);
+  border-color: var(--approval-colour);
 }
 
 #name {
@@ -194,7 +213,8 @@
       "phone message"
       "email message"
       "subscription message"
-      "submit message";
+      "submit message"
+      "order .";
     grid-gap: 40px 100px;
   }
 

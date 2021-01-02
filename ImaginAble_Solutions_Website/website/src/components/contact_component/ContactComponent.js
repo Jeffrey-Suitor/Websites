@@ -177,6 +177,10 @@ export default class ContactComponent extends React.Component {
             </svg>
           </div>
         </form>
+
+        <a href="https://forms.gle/ozv4tSYMWrTcK7z77">
+          <button className="contact-order-now">Pre-Order now</button>
+        </a>
       </div>
     );
   }
