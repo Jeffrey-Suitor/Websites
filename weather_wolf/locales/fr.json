@@ -1,0 +1,20 @@
+{
+    "weather-wolf": "Météo Loup",
+    "nature-is-calling": "La nature appelle",
+    "dark": "Sombre",
+    "light": "Lumineux",
+    "your-city-is": "Votre ville c'est : ",
+    "not-found": "Pas trouvé",
+    "en": "Anglais",
+    "fr": "Français",
+    "locale-not-found": "Paramètres régionaux introuvables",
+    "sunrise": "Lever du soleil",
+    "sunset": "Coucher du soleil",
+    "date": "Date",
+    "time": "Temps",
+    "feels-like": "Ressentie",
+    "temperature": "Temperature",
+    "humidity": "Humidité",
+    "weather": "Temps",
+    "description": "Description"
+}

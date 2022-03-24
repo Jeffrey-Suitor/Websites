@@ -1,0 +1,20 @@
+{
+  "weather-wolf": "WEATHER WOLF",
+  "nature-is-calling": "Nature is calling",
+  "dark": "Dark",
+  "light": "Light",
+  "your-city-is": "Your city is : ",
+  "not-found": "Not found",
+  "en": "English",
+  "fr": "French",
+  "locale-not-found": "Locale not found",
+  "sunrise": "Sunrise",
+  "sunset": "Sunset",
+  "date": "Date",
+  "time": "Time",
+  "feels-like": "Feels Like",
+  "temperature": "Temperature",
+  "humidity": "Humidity",
+  "weather": "Weather",
+  "description": "Description"
+}
