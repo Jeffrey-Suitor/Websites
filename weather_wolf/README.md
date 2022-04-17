@@ -1,10 +1,21 @@
-# Vitesse Add-On Samples
-Different branches of this repo show how to add different things to a Vitesse setup
-
-None of these are real hard to do on your own, but I thought it might save others looking for similar setups some time.
+# Weather Wolf (Modiface Take Home)
 
 
-## Features
+## To start the project:
+- install pnpm https://www.npmjs.com/package/pnpm
+- pnpm install 
+- pnpm dev
 
-- [Storybook](https://github.com/JohnCampionJr/vitesse-addons/tree/storybook/)
-- [Prettier](https://github.com/JohnCampionJr/vitesse-addons/tree/prettier)
+## Highlights of the project:
+- French and English localization
+- Both light and dark modes
+- Support for all 3 unit types different units
+- Vue 3 script setup
+- Using vite instead of webpack
+- Support for location-based searching using google places API
+
+## If I hadn't been sick I would have added:
+- Jest unit and snapshot testing
+- Improved weather display including deeper statistics and an improved user experience
+- Further support for additional languages
+- Fixing the sunrise and sunset timing for different locales.
