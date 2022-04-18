@@ -1,10 +1,12 @@
-import type Clinic from '../../types/clinicInterface';
+import type Clinic from '../../types/clinic_interface';
 import { useClinic } from '../../contexts/clinic_provider';
 import NectarHeader from '../../components/nectar_header';
-import EmployeeInterface from '../../types/employeeInterface';
-import { useEffect, useState } from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
+import EmployeeInterface from '../../types/employee_interface';
+import { Button, Card, Col, Row } from 'react-bootstrap';
 import VeterinarianColumn from '../../components/veterinarian_column';
+import { useDate } from '../../contexts/date_provider';
+import { useBookAppointmentModal } from '../../contexts/book_appointment_modal_provider';
+import BookAppointmentModal from '../../components/book_appointment_modal';
 
 export async function getStaticPaths() {
   const res = await fetch(
@@ -32,7 +34,6 @@ export async function getStaticProps({ params }) {
 
   const vet_sched = {};
   appointments.forEach((appointment) => {
-    // appointment.start_time = new Date(appointment.start_time);
     if (vet_sched[appointment.vet_id] === undefined) {
       vet_sched[appointment.vet_id] = [appointment];
     } else {
@@ -49,9 +50,10 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Dashboard({ vet_sched }) {
-  const [timeslots, setTimeslots] = useState([]);
   const { currentClinic } = useClinic();
-  console.log(vet_sched);
+  const { timeslots } = useDate();
+  const { showBookAppointmentModal, setShowBookAppointmentModal } =
+    useBookAppointmentModal();
 
   const veterinarians = currentClinic.employees.filter(
     (employee: EmployeeInterface) => {
@@ -59,55 +61,79 @@ export default function Dashboard({ vet_sched }) {
     }
   );
 
-  useEffect(() => {
-    const tempTimeslots = [];
-    for (let i = 0; i < 33; i++) {
-      // 32 timeslots of 15 minutes each
-      const time = new Date();
-      time.setHours(9);
-      time.setMinutes(i * 15);
-      tempTimeslots.push(time);
-    }
-    setTimeslots(tempTimeslots);
-  }, []);
+  console.log(vet_sched);
 
   return (
     <>
+      {showBookAppointmentModal && <BookAppointmentModal />}
       <NectarHeader />
       <Row className="mt-5">
-        <Col>
-          <Row>
-            <Card bg={'light'}>
-              <Card.Header>Timeslots</Card.Header>
+        <Row className="mb-2">
+          <Col xs={2}>
+            <Card className="h-100">
+              <Card.Body>
+                <Card.Title>Timeslots</Card.Title>
+              </Card.Body>
             </Card>
-          </Row>{' '}
-          {timeslots.map((timeslot) => {
+          </Col>
+          {veterinarians.map((veterinarian) => {
             return (
-              <Row>
-                <Card bg={'light'}>
-                  <Card.Header>
-                    {timeslot.toLocaleTimeString('en-US', {
-                      hour: '2-digit',
-                      minute: '2-digit',
-                    })}
-                  </Card.Header>
+              <Col>
+                <Card
+                  bg={veterinarian.active ? '' : 'warning'}
+                  className="h-100"
+                >
+                  <Card.Body>
+                    <Card.Title>
+                      {veterinarian.first_name + ' ' + veterinarian.last_name}
+                    </Card.Title>
+                  </Card.Body>
                 </Card>
-              </Row>
+              </Col>
             );
           })}
-        </Col>
-        {veterinarians.map((veterinarian) => {
+        </Row>
+        {timeslots.map((timeslot, idx) => {
           return (
-            <Col>
-              <VeterinarianColumn
-                veterinarian={veterinarian}
-                timeslots={timeslots}
-                vet_sched={vet_sched[veterinarian.id]}
-              />
-            </Col>
+            <Row className="mb-2">
+              <Col xs={2}>
+                <Card className="h-100">
+                  <Card.Body>
+                    <Card.Title>
+                      {' '}
+                      {timeslot.toLocaleTimeString('en-US', {
+                        hour: '2-digit',
+                        minute: '2-digit',
+                      })}
+                    </Card.Title>
+                  </Card.Body>
+                </Card>
+              </Col>
+              {veterinarians.map((veterinarian) => {
+                return (
+                  <Col>
+                    <VeterinarianColumn
+                      vet_sched={vet_sched[veterinarian.id]}
+                      timeslotStart={timeslots[idx]}
+                      timeslotEnd={timeslots[idx + 1]}
+                    />
+                  </Col>
+                );
+              })}
+            </Row>
           );
         })}
       </Row>
+      <Button
+        className="p-3 m-5 fixed-bottom w-25 float-right"
+        variant="primary"
+        onClick={() => {
+          setShowBookAppointmentModal(true);
+        }}
+        style={{ left: 'unset' }}
+      >
+        Add Appointment
+      </Button>{' '}
     </>
   );
 }

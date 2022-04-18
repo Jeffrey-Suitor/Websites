@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Image from 'react-bootstrap/Image';
 import { useState } from 'react';
-import type ClinicInterface from '../types/clinicInterface';
+import type ClinicInterface from '../types/clinic_interface';
 import { useClinic } from '../contexts/clinic_provider';
 import { Container, Row } from 'react-bootstrap';
 

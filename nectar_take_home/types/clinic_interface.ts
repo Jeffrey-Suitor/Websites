@@ -1,4 +1,4 @@
-import EmployeeInterface from './employeeInterface';
+import EmployeeInterface from './employee_interface';
 
 export default interface ClinicInterface {
   name: string;

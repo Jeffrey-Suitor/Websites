@@ -5,7 +5,7 @@ import {
   SetStateAction,
   Dispatch,
 } from 'react';
-import type ClinicInterface from '../types/clinicInterface';
+import type ClinicInterface from '../types/clinic_interface';
 
 const defaultClinic: ClinicInterface = {
   name: 'default',

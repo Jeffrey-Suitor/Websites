@@ -16,3 +16,7 @@ a {
 }
 
 @import "~bootstrap/scss/bootstrap";
+
+body {
+    padding-top: $navbar-padding-y + $nav-link-height + $navbar-padding-y;
+}
