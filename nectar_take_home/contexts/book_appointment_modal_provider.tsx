@@ -12,6 +12,8 @@ interface BookAppointmentModalProviderInterface {
   setShowBookAppointmentModal: Dispatch<SetStateAction<boolean>>;
   bookAppointmentModalDate: Date;
   setBookAppointmentModalDate: Dispatch<SetStateAction<Date>>;
+  bookAppointmentModalVetID: string;
+  setBookAppointmentModalVetID: Dispatch<SetStateAction<string>>;
 }
 
 const BookAppointmentModalContext =
@@ -20,6 +22,8 @@ const BookAppointmentModalContext =
     setShowBookAppointmentModal: () => {},
     bookAppointmentModalDate: new Date(),
     setBookAppointmentModalDate: () => {},
+    bookAppointmentModalVetID: '',
+    setBookAppointmentModalVetID: () => {},
   });
 
 export const useBookAppointmentModal = () =>
@@ -32,6 +36,9 @@ export const BookAppointmentModalProvider = ({ children }) => {
   const [bookAppointmentModalDate, setBookAppointmentModalDate] = useState(
     new Date()
   );
+
+  const [bookAppointmentModalVetID, setBookAppointmentModalVetID] =
+    useState('');
 
   useEffect(() => {
     if (bookAppointmentModalDate.getMinutes() % 15 === 0) {
@@ -50,6 +57,8 @@ export const BookAppointmentModalProvider = ({ children }) => {
         setShowBookAppointmentModal,
         bookAppointmentModalDate,
         setBookAppointmentModalDate,
+        bookAppointmentModalVetID,
+        setBookAppointmentModalVetID,
       }}
     >
       {children}

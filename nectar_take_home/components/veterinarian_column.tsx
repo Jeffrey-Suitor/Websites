@@ -13,8 +13,11 @@ export default function Dashboard({
   timeslotStart,
   timeslotEnd,
 }: DashboardProps) {
-  const { setShowBookAppointmentModal, setBookAppointmentModalDate } =
-    useBookAppointmentModal();
+  const {
+    setShowBookAppointmentModal,
+    setBookAppointmentModalDate,
+    setBookAppointmentModalVetID,
+  } = useBookAppointmentModal();
 
   const timeslotAppointments = vet_sched
     .map((appointment: AppointmentInterface) => {
@@ -103,6 +106,7 @@ export default function Dashboard({
                 <Button
                   variant="outline-primary"
                   onClick={() => {
+                    setBookAppointmentModalVetID(vet_sched[0].vet_id);
                     setBookAppointmentModalDate(timeslotStart);
                     setShowBookAppointmentModal(true);
                   }}

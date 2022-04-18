@@ -52,16 +52,19 @@ export async function getStaticProps({ params }) {
 export default function Dashboard({ vet_sched }) {
   const { currentClinic } = useClinic();
   const { timeslots } = useDate();
-  const { showBookAppointmentModal, setShowBookAppointmentModal } =
-    useBookAppointmentModal();
+
+  const {
+    showBookAppointmentModal,
+    setShowBookAppointmentModal,
+    setBookAppointmentModalDate,
+    setBookAppointmentModalVetID,
+  } = useBookAppointmentModal();
 
   const veterinarians = currentClinic.employees.filter(
     (employee: EmployeeInterface) => {
       return employee.clinic_role === 'veterinarian';
     }
   );
-
-  console.log(vet_sched);
 
   return (
     <>
@@ -128,6 +131,8 @@ export default function Dashboard({ vet_sched }) {
         className="p-3 m-5 fixed-bottom w-25 float-right"
         variant="primary"
         onClick={() => {
+          setBookAppointmentModalDate(new Date());
+          setBookAppointmentModalVetID('');
           setShowBookAppointmentModal(true);
         }}
         style={{ left: 'unset' }}

@@ -16,6 +16,7 @@ export default function BookAppointmentModal() {
     showBookAppointmentModal,
     setShowBookAppointmentModal,
     bookAppointmentModalDate,
+    bookAppointmentModalVetID,
   } = useBookAppointmentModal();
 
   const appointment_types = [
@@ -42,7 +43,7 @@ export default function BookAppointmentModal() {
     patient_breed: '',
     patient_dob: new Date().toLocaleString('sv').replace(' ', 'T'),
     patient_color: '',
-    vet_id: veterinarians[0].id,
+    vet_id: bookAppointmentModalVetID,
     tech_id: veterinary_technicians[0].id,
     staff_notes: '',
     appointment_type: appointment_types[0],
@@ -63,6 +64,13 @@ export default function BookAppointmentModal() {
         .replace(' ', 'T'),
     });
   }, [bookAppointmentModalDate]);
+
+  useEffect(() => {
+    setFormState({
+      ...formState,
+      vet_id: bookAppointmentModalVetID.toString(),
+    });
+  }, [bookAppointmentModalVetID]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -149,6 +157,8 @@ export default function BookAppointmentModal() {
                   type="radio"
                   label={veterinarian.first_name + ' ' + veterinarian.last_name}
                   id={veterinarian.id}
+                  checked={veterinarian.id === formState.vet_id}
+                  name="veterinarianGroup"
                   onChange={(e) => {
                     setFormState({
                       ...formState,
@@ -169,6 +179,7 @@ export default function BookAppointmentModal() {
                   type="radio"
                   label={vet_tech.first_name + ' ' + vet_tech.last_name}
                   id={vet_tech.id}
+                  name="veterinaryTechnicianGroup"
                   onChange={(e) => {
                     setFormState({
                       ...formState,
@@ -187,6 +198,7 @@ export default function BookAppointmentModal() {
                   key={appointment_type}
                   className="text-capitalize"
                   type="radio"
+                  name="appointmentTypeGroup"
                   label={appointment_type.replace('_', ' ')}
                   id={appointment_type}
                   onChange={(e) => {
@@ -208,6 +220,7 @@ export default function BookAppointmentModal() {
                   className="text-capitalize"
                   type="radio"
                   label={status.replace('_', ' ')}
+                  name="statusGroup"
                   id={status}
                   onChange={(e) => {
                     setFormState({
