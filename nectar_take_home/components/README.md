@@ -4,6 +4,7 @@ This is a NextJS app using react boostrap. This project uses server-side renderi
 
 To start the app:
 
+npm install
 npm run dev
 
 To login select the appropriate vet clinic. Enter in any email (must contain an @ and no special chars) and password. There is no saving our authentication. Note, that if you refresh the page due to the lack of user memory you will have to return to the login page and login once again. In futures version authentication and remembering the user would prevent this from being an issue.
